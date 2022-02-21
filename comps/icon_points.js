@@ -11,6 +11,7 @@ template_points.innerHTML = `
     box-shadow: 0px 8px 6px 0px #b9b9b9;
     padding: 20px;
     box-sizing: border-box;
+    cursor: pointer;
   }
   #iconBox > img {
       object-fit: cover;
