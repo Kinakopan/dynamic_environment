@@ -20,7 +20,7 @@ template_points.innerHTML = `
 </style>
 
 <div id="iconBox">
-  <img src="./img/icon/cow.png" max-width="100%" max-height="100%" alt="">
+  <img src="./img/icon/cow.png"  alt="" max-width="100%" max-height="100%">
 </div>
 `;
 
