@@ -7,6 +7,7 @@ template_scroll.innerHTML = `
     width: 29.5px;
     height: 40px;
     position: relative;
+    cursor: pointer;
   }
   .topArrow,
   .btmArrow {
