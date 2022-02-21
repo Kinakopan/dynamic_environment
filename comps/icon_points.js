@@ -6,10 +6,10 @@ template_points.innerHTML = `
   #iconBox {
     background: #E5E5E5;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     box-shadow: 0px 8px 6px 0px #b9b9b9;
-    padding: 40px;
+    padding: 20px;
     box-sizing: border-box;
   }
   #iconBox > img {
@@ -20,7 +20,7 @@ template_points.innerHTML = `
 </style>
 
 <div id="iconBox">
-  <img src="./img/icon/cow.png" alt="">
+  <img src="./img/icon/cow.png"  alt="" max-width="100%" max-height="100%">
 </div>
 `;
 
