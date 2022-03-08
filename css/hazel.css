@@ -1,0 +1,37 @@
+  /* Create the animation... */
+  @keyframes popup {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
+  /* ...and then apply it: */
+  .blooding {
+    animation: popup 1000ms;
+  }
+
+  body {
+    padding: 32px 0;
+  }
+  .blooding {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    display: grid;
+    place-content: center;
+    color: white;
+    text-align: center;
+  }
+
+  .blodding2 {
+      animation-delay: 1s;
+  }
+  .blodding3 {
+    animation-delay: 2s;
+}
+.blodding4 {
+    animation-delay: 3s;
+}
