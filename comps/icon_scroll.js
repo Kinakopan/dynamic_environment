@@ -6,7 +6,10 @@ template_scroll.innerHTML = `
   #scrollBox {
     width: 29.5px;
     height: 40px;
-    position: relative;
+    position: absolute;
+    margin-top: calc(100vh - 100px);
+    left: 50%;
+    transform: translateX(-50%);
     cursor: pointer;
   }
   .topArrow,
