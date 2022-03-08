@@ -13,8 +13,8 @@ template_clickable.innerHTML = `
 #clickableBox,
 #clickableBox::after {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   box-sizing: border-box;
 }
 
@@ -27,9 +27,9 @@ template_clickable.innerHTML = `
   outline: 5px dashed #ffe600;
   outline-offset: 5px;
   animation: rotate 5s linear 2s infinite alternate;
-  -webkit-animation:spin 4s linear infinite;
-  -moz-animation:spin 4s linear infinite;
-  animation:spin 4s linear infinite;
+  -webkit-animation:spin 10s linear infinite;
+  -moz-animation:spin 10s linear infinite;
+  animation:spin 10s linear infinite;
 }
 @-moz-keyframes spin {
     100% { -moz-transform: rotate(360deg); }
@@ -75,8 +75,12 @@ class TheClickable extends HTMLElement {
           this.shadowRoot.querySelector("#clickableBox > img").src = this.getAttribute("icon_image");
         }
 
-        if(this.getAttribute("icon_image")){
+        if(this.getAttribute("icon_alt")){
           this.shadowRoot.querySelector("#clickableBox > img").alt = this.getAttribute("icon_alt");
+        }
+
+        if(this.getAttribute("icon_margin")){
+          this.shadowRoot.querySelector("#clickableBox").style.margin = this.getAttribute("icon_margin");
         }
 
     }

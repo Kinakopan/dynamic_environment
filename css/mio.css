@@ -1,0 +1,12 @@
+#section2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.clickable_earth {
+  flex: 2.5;
+}
+
+.clickable_airplane {
+  flex: 1.5;
+}
