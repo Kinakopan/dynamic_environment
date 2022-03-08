@@ -2,5 +2,13 @@ body {
       background-image: url("../img/background.png");
       background-repeat: no-repeat;
       width: 100%;
+      min-width: 320px;
       background-size: 100%;
     }
+
+.section {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-height: 300px;
+}
