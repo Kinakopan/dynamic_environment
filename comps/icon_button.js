@@ -39,13 +39,16 @@ class TheButton extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text')
-        // this.querySelector("#button").onclick = () => {
-        //   document.querySelector()
-        // }
-    }
+        this.shadowRoot.querySelector("#button").onclick = () => this.startAnimation();
+         
 
+    }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    startAnimation() {
+        document.body.style.background = "rgba(0, 0, 0, 0.3)";
+    }
+    
 }
 
-//MUST HAVE - define the tag for the custom elements
+//MUST HAVE - define the tag for the custom elements 
 customElements.define("the-button", TheButton)
