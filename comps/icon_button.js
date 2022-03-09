@@ -23,6 +23,7 @@ template_button.innerHTML = `
 </button>
 `;
 
+
 //MUST HAVE - CREATE A CLASS WITH HTMLELEMENT POWERS (interfaces/functionalities)
 class TheButton extends HTMLElement {
 
