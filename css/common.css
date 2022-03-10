@@ -33,6 +33,7 @@ body::before {
   flex-direction: column;
   justify-content: stretch;
   width: 100%;
+  overflow: hidden;
 }
 
 .section {
