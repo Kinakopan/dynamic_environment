@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/mio.css">
   <link rel="stylesheet" href="css/hazel.css">
   <link rel="stylesheet" href="css/minyoung.css">
+  <link rel="stylesheet" href="css/verna.css">
 
   <script src="comps/icon_top.js"></script>
   <script src="comps/icon_scroll.js"></script>
@@ -18,8 +19,9 @@
   <script src="comps/text_paragraph.js"></script>
   <script src="comps/icon_button.js"></script>
   <script src="comps/the_title.js"></script>
+  <script src="comps/section_3.js"></script>
 </head>
-
+  
 <body>
   <div class="contentsWrap">
 
@@ -48,7 +50,17 @@
     </div>
 
     <div id="section3" class="section">
+        <the-clickable class="clickable clickable_waste"
+        onclick="this.paperWasteAnimationCallback()"
+          icon_image="./img/icon/paper-waste.png"
+          icon_alt="paper waste"
+          icon_margin="0 0 0 0 auto"
+        ></the-clickable>
+        <div id="recycle-bin" class="paper-waste" tyle="position: absolute;left:50%;bottom:20%">
+          <img src="./img/icon/recycle-bin.png" alt="Recyle-bin">
 
+        </div>
+        
     </div>
 
     <div id="section4" class="section">
