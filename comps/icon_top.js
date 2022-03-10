@@ -78,10 +78,15 @@ class TheTop extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_top.content.cloneNode(true)); //use the template to make a clone
-
+        document.querySelector("#top").onclick = () => this.backToTop();
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+
+    backToTop() {
+        window.scrollTo(0, 0);
+    }
+
 }
 
 //MUST HAVE - define the tag for the custom elements

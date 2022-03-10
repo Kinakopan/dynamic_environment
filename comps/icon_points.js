@@ -39,10 +39,11 @@ class ThePoints extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_points.content.cloneNode(true)); //use the template to make a clone
-
+       
         if(this.getAttribute("icon_image")){
           this.shadowRoot.querySelector("#iconBox > img").src = this.getAttribute("icon_image");
         }
+
 
         if(this.getAttribute("icon_image")){
           this.shadowRoot.querySelector("#iconBox > img").alt = this.getAttribute("icon_alt");
