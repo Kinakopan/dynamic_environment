@@ -7,8 +7,8 @@
   <title>Environment app</title>
 
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/mio.css">
   <link rel="stylesheet" href="css/hazel.css">
+  <link rel="stylesheet" href="css/mio.css">
   <link rel="stylesheet" href="css/minyoung.css">
   <link rel="stylesheet" href="css/verna.css">
 
@@ -19,35 +19,73 @@
   <script src="comps/text_paragraph.js"></script>
   <script src="comps/icon_button.js"></script>
   <script src="comps/the_title.js"></script>
+
 </head>
   
 <body>
   <div class="contentsWrap">
 
-    <the-top>
+    <the-top id="top">
     </the-top>
 
     <the-scroll>
     </the-scroll>
 
+    <!-- Start of section 1 -->
     <div id="section1" class="section">
+      <div class="barnContainer">
+          <div class="barnBox">
+            <img class="barn barn1" src="/img/icon/barn.png" alt="cow">
+          </div>
+          <div class="barnBox">
+            <img class="barn barn2" src="/img/icon/barn.png" alt="cow">
+          </div>
+          <div class="barnBox">
+            <img class="barn barn3" src="/img/icon/barn.png" alt="cow">
+          </div>
+          <div class="barnBox">
+            <img class="barn barn4" src="/img/icon/barn.png" alt="cow">
+          </div>
+      </div>
 
+      <div class="smokeContainer">
+        <img class="house" src="/img/icon/farm.png" alt="house">
+        <img class="smoke smoke1" src="/img/icon/smoke.png" alt="smoke">
+        <img class="smoke smoke2" src="/img/icon/smoke.png" alt="smoke">
+        <img class="smoke smoke3" src="/img/icon/smoke.png" alt="smoke">
+        <div class="smoke4Box">
+          <img class="smoke smoke4" src="/img/icon/smoke.png" alt="smoke">
+          <img class="knife" src="/img/icon/knife.png" alt="knife">
+        </div>
+      </div>
+
+      <div class="humanContainer">
+        <img class="human human1" src="/img/icon/human.png" alt="blooding human">
+        <img class="human human2" src="/img/icon/human.png" alt="blooding human">
+        <img class="human human3" src="/img/icon/human.png" alt="blooding human">
+        <img class="human human4" src="/img/icon/human.png" alt="blooding human">
+        <img class="human human5" src="/img/icon/human.png" alt="blooding human">
+      </div>
     </div>
+    <!-- End of section 1 -->
 
+    <!-- Start of section 2 -->
     <div id="section2" class="section">
       <the-clickable class="clickable clickable_earth"
         icon_image="./img/icon/earth.gif"
         icon_alt="earth"
       ></the-clickable>
 
-      <the-clickable class="clickable clickable_airplane"
+      <the-clickable 
+        class="clickable clickable_airplane"
         icon_image="./img/icon/airplane.gif"
         icon_alt="airplane"
         icon_margin="0 0 0 auto"
       ></the-clickable>
-
     </div>
+    <!-- End of section 2 -->
 
+    <!-- Start of section 3 -->
     <div id="section3" class="section">
       <div class="box3_1">
         <the-points
@@ -77,57 +115,69 @@
         </div>
         
     </div>
+    <!-- End of section 3 -->
 
+    <!-- Start of section 4 -->
     <div id="section4" class="section">
+
      
-      <the-title
-        head_text="Over producing"
-        text_color="#DCE8FF"
-        text_size="20px"
-      ></the-title>
+      <div id="last">
+        <the-title
+          head_text="Over producing"
+          text_color="#DCE8FF"
+          text_size="20px"
+        ></the-title>
+     
+        <div class="box4_1">
+          <the-points
+          icon-image="./img/icon/chimney.png"
+          ></the-points>
 
-      <div class="box4_1">
-        <the-points
-        icon-image="./img/icon/chimney.png"
-        ></the-points>
+          <the-points
+          icon_image="./img/icon/tractors 1.png"
+          ></the-points>
 
-        <the-points
-        icon_image="./img/icon/tractors 1.png"
-        ></the-points>
-
-        <the-points
-        icon_image="./img/icon/fashion 1.png"
-        ></the-points>
+          <the-points
+          icon_image="./img/icon/fashion 1.png"
+          ></the-points>
+        </div>
       </div>
 
+
+      <div id="second">
       <the-paragraph class="para4_1"
       head_text="Destroys their habitats"
       ></the-paragraph>
+      </div>
 
-      <the-clickable id="button4" 
+      <the-clickable 
+      id="clicked" 
+      class="clickable"
       icon_image="./img/icon/bear.png"
       ></the-clickable>
 
-      <img src="./img/icon/ice.png" alt="">
+     
+        <div id="first">
 
-      <div class="box4_2">
-        <div class="box4_3">
           <img src="./img/icon/dead-fish.png" alt="dead-fish">
           <img src="./img/icon/dead-fish.png" alt="dead-fish">
           <img src="./img/icon/dead-fish.png" alt="dead-fish">
+
+          <the-paragraph class="para4_2"
+          order="1"
+          head_text="Collapse ecosystems"
+          ></the-paragraph>
+
         </div>
+    
 
-        <the-paragraph class="para4_2"
-        head_text="Collapse ecosystems"
-        ></the-paragraph>
-
-      </div>  
+        <the-button
+        id="button"
+        button_text="next"
+        ></the-button>
 
     </div>
 
-
-
-
-
+    <!-- end of section4  -->
 </body>
 </html>
