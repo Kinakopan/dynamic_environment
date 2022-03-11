@@ -49,8 +49,14 @@ body::before {
   flex:1;
 }
 
-#section2,
-#section3,
+#section2 {
+  flex: 3;
+}
+
+#section3 {
+  flex: 1;
+}
+
 #section4 {
   flex: 2;
 }
