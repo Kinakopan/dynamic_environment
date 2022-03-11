@@ -49,10 +49,24 @@ template_clickable.innerHTML = `
   max-width: 100%;
   max-height: 100%;
 }
+
+#blackBg {
+  position: absolute;
+  left: -60%;
+  right: 0;
+  top: -200%;
+  background-color: black;
+  opacity: 40%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  display: none;
+}
 </style>
 
 <div id="clickableBox">
   <img src="./img/icon/cow.png"  alt="" max-width="100%" max-height="100%">
+  <div id="blackBg"></div>
 </div>
 `;
 
@@ -70,6 +84,8 @@ class TheClickable extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_clickable.content.cloneNode(true)); //use the template to make a clone
+        this.shadowRoot.querySelector("#clickableBox").onclick = () => this.startAnimation();
+        
 
         if(this.getAttribute("icon_image")){
           this.shadowRoot.querySelector("#clickableBox > img").src = this.getAttribute("icon_image");
@@ -86,6 +102,15 @@ class TheClickable extends HTMLElement {
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
+    startAnimation() {
+      this.shadowRoot.querySelector("#blackBg").style.cssText = `display: block;`
+    }
+
+    finishAnimation() {
+      this.shadowRoot.querySelector("#blackBG").style.cssText = `display: none;`
+    }
+
+
 }
 
 //MUST HAVE - define the tag for the custom elements

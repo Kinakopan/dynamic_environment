@@ -15,12 +15,18 @@ template_button.innerHTML = `
   color: #2D436A;
   font-weight: bold;
   letter-spacing: 1px;
+  display: none;
+  float: right;
+  z-index: 2;
+ position: relative;
  } 
+
 
 </style>
 
 <button id="button" type="button">
 </button>
+
 `;
 
 
@@ -39,15 +45,37 @@ class TheButton extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text')
-        this.shadowRoot.querySelector("#button").onclick = () => this.startAnimation();
-         
+        document.querySelector("#button").onclick = () => {
+            this.buttonDisappear();
+            this.showParagraph();
+        }
+
+        document.querySelector("#clicked").onclick = () => this.buttonAppear();
+            
 
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    startAnimation() {
-        document.body.style.background = "rgba(0, 0, 0, 0.3)";
+    buttonDisappear() {
+        this.shadowRoot.querySelector("#button").style.cssText = `display: none;`
     }
     
+    buttonAppear() {
+        this.shadowRoot.querySelector("#button").style.cssText = `display: block;`
+    }
+
+    showParagraph() {
+        document.querySelector(".box4_3").style.cssText = `
+        display: block;
+        position: relative;
+        z-index: 2;
+        margin-left: 50%;
+        animation: slide-in 1000ms;
+        `;
+        document.querySelector("box4_1").style.cssText = `
+        display: block;
+        
+        `
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements 
