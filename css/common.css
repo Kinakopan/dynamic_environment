@@ -33,7 +33,9 @@ body::before {
   flex-direction: column;
   justify-content: stretch;
   width: 100%;
-  overflow: hidden;
+  background: transparent;
+  z-index: 0;
+
 }
 
 .section {
@@ -58,3 +60,4 @@ body::before {
 #section4 {
   flex: 2;
 }
+
