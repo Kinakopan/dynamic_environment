@@ -9,7 +9,7 @@ template_top.innerHTML = `
     background: #59556E;
     border: solid 4px #ffe500;
     border-radius: 50%;
-    bottom: 50px;
+    bottom: 20px;
     right: 20px;
     position: fixed;
     cursor: pointer;
