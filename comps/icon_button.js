@@ -15,7 +15,7 @@ template_button.innerHTML = `
   color: #2D436A;
   font-weight: bold;
   letter-spacing: 1px;
- } 
+ }
 
 </style>
 
