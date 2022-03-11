@@ -11,145 +11,74 @@
   flex: 1.5;
 }
 
-  #section1 {
-    margin: 0 auto;
-    position: relative;
-  }
-  .barnContainer,
-  .smokeContainer,
-  .humanContainer {
-    display: flex;
-    position: absolute;
-    width: 100%;
-  }
-  .barnContainer {
-    bottom: 50px;
-    height: 100px;
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    justify-content: center;
-    width: 55%;
-    left: 10%;
-  }
-  .smokeContainer {
-    flex-direction: column-reverse;
-    width: 50%;
-    right: 10%;
-    bottom: 0;
-    height: 80%;
-    justify-content: end;
-    align-items: flex-end;
-    padding-bottom: 50px;
-  }
-  .humanContainer {
-    flex-direction: column;
-    width: 20%;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: flex-start;
-    margin-left: 5%;
-    padding-top: 15%;
-    top: 0;
-  }
-  .house {
-    width: 45%;
-  }
-  .barnBox {
-    flex: 1;
-    width: 100%;;
-    height: 100%;
-    align-items: flex-end;
-    display: flex;
-  }
-  .barn {
-    width: 100%;
-    height: auto;
-  }
-  .smoke {
-    margin-right: 40%;
-  }
-  .smoke1 {
-    height: 5%;
-  }
-  .smoke2 {
-    height: 15%;
-  }
-  .smoke3 {
-    height: 25%;
-  }
-  .smoke4Box {
-    width: 100%;
-    height: 35%;
-    align-self: flex-start;
-        position: relative;
-  }
-  .smoke4 {
-    height: 100%;
-  }
-  .knife {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    width: 20%;
-    transform: rotateY(180deg) rotateZ(30deg) translateY(-50%);
-  }
-  .human {
-    width: 50%;
-    height: auto;
-    transform: translateX(-50%);
-  }
-  .human {
-    transform: translateX(-50%);
-  }
-  .human2 {
-    transform: rotate(260deg);
-  }
-  .human3 {
-    transform: rotateX(180deg) rotateZ(130deg);
-  }
-  .human4 {
-    transform: rotateX(180deg) rotateZ(90deg);
-  }
-  .human5 {
-    transform: rotateX(180deg) rotateZ(180deg);
-  }
+#section1 {
+  margin: 0 auto;
+  position: relative;
+}
+.barnContainer,
+.smokeContainer,
+.humanContainer {
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+
+.barnContainer {
+  bottom: 50px;
+  height: 100px;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  justify-content: center;
+  width: 55%;
+  left: 10%;
+}
+.barnBox {
+  flex: 1;
+  width: 100%;;
+  height: 100%;
+  align-items: flex-end;
+  display: flex;
+}
+.barn {
+  width: 100%;
+  height: auto;
+}
 
 
-  /* Create the animation... */
-  @keyframes popup {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100%;
-    }
+/* Create the animation... */
+@keyframes popup {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 100%;
+  }
+}
 
-  /* ...and then apply it: */
-  .blooding {
-    animation: popup 1000ms;
-  }
+/* ...and then apply it: */
+.blooding {
+  animation: popup 1000ms;
+}
 
-  body {
-    padding: 32px 0;
-  }
-  .blooding {
-    width: 100px;
-    height: 100px;
-    padding: 8px;
-    display: grid;
-    place-content: center;
-    color: white;
-    text-align: center;
-  }
+body {
+  padding: 32px 0;
+}
+.blooding {
+  width: 100px;
+  height: 100px;
+  padding: 8px;
+  display: grid;
+  place-content: center;
+  color: white;
+  text-align: center;
+}
 
-  .blodding2 {
-      animation-delay: 1s;
-  }
-  .blodding3 {
-    animation-delay: 2s;
-  }
-  .blodding4 {
-      animation-delay: 3s;
-  }
+.blodding2 {
+    animation-delay: 1s;
+}
+.blodding3 {
+  animation-delay: 2s;
+}
+.blodding4 {
+    animation-delay: 3s;
+}
