@@ -91,11 +91,11 @@ class TheClickable extends HTMLElement {
 
       console.log(binRect.left, binRect.right);
       let destX = (binRect.left+binRect.right)/2;
-      let destY = (binRect.top+binRect.bottom)/12;  
+      let destY = (binRect.top+binRect.bottom)/36;  
       let timer = null;
       let x = 0,y = 0;
       clearInterval(timer);
-      timer = setInterval(frame,5);
+      timer = setInterval(frame,1);
       function frame() {
         if (x+100 >= destX) {
           clearInterval(timer);
@@ -107,7 +107,7 @@ class TheClickable extends HTMLElement {
         }
       }
     }
-     
+    
 
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

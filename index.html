@@ -19,7 +19,6 @@
   <script src="comps/text_paragraph.js"></script>
   <script src="comps/icon_button.js"></script>
   <script src="comps/the_title.js"></script>
-  <script src="comps/section_3.js"></script>
 </head>
   
 <body>
@@ -50,15 +49,31 @@
     </div>
 
     <div id="section3" class="section">
+      <div class="box3_1">
+        <the-points
+        icon_image="./img/icon/methane.png"
+        ></the-points>
+
+        <the-points
+        icon_image="./img/icon/layer.png"
+        ></the-points>
+
+        <the-points
+        icon_image="./img/icon/goat.png"
+        ></the-points>
+      </div>
         <the-clickable class="clickable clickable_waste"
         onclick="this.paperWasteAnimationCallback()"
           icon_image="./img/icon/paper-waste.png"
           icon_alt="paper waste"
           icon_margin="0 0 0 0 auto"
         ></the-clickable>
-        <div id="recycle-bin" class="paper-waste" tyle="position: absolute;left:50%;bottom:20%">
-          <img src="./img/icon/recycle-bin.png" alt="Recyle-bin">
-
+        <div id="recycle-bin" class="paper-waste" style="position: absolute;left:50%;width:20%;bottom:20%">
+          <img src="./img/icon/recycle-bin.png" alt="Recyle-bin" style="width: 100%;">
+        </div>
+        <div id="forest">
+          <div class="roll-img1"><img src="img/icon/forest 1.png"></div>
+       
         </div>
         
     </div>
