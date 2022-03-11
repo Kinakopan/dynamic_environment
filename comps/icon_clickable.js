@@ -50,18 +50,10 @@ template_clickable.innerHTML = `
   max-height: 100%;
 }
 
-#blackBg {
-  position: absolute;
-  left: -60%;
-  right: 0;
-  top: -200%;
-  background-color: black;
-  opacity: 40%;
-  height: 100vh;
-  width: 100vw;
+#contentsWrap {
   z-index: 1;
-  display: none;
 }
+
 </style>
 
 <div id="clickableBox">
@@ -128,11 +120,11 @@ class TheClickable extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     startAnimation() {
-      this.shadowRoot.querySelector("#blackBg").style.cssText = `display: block;`
+      document.querySelector(".contentsWrap").style.cssText = `background: rgba(0,0,0,0.8);`
     }
 
     finishAnimation() {
-      this.shadowRoot.querySelector("#blackBG").style.cssText = `display: none;`
+      document.querySelector(".contentsWrap").style.cssText = `background: transparent;`
     }
 
 

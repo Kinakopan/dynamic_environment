@@ -45,12 +45,14 @@ class TheButton extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text')
-        document.querySelector("#button").onclick = () => {
-            this.buttonDisappear();
+        document.querySelector("#clicked").onclick = () => {
+            this.buttonAppear();
             this.showParagraph();
         }
 
-        document.querySelector("#clicked").onclick = () => this.buttonAppear();
+         document.querySelector("#button").onclick = () => {
+            this.buttonDisappear();
+            }
             
 
     }
@@ -64,16 +66,19 @@ class TheButton extends HTMLElement {
     }
 
     showParagraph() {
-        document.querySelector(".box4_3").style.cssText = `
+        document.querySelector("#first").style.cssText = `
         display: block;
         position: relative;
         z-index: 2;
         margin-left: 50%;
         animation: slide-in 1000ms;
         `;
-        document.querySelector("box4_1").style.cssText = `
+        document.querySelector("#second").style.cssText = `
         display: block;
-        
+        float: right;
+        `;
+        document.querySelector("#last").style.cssText = `
+        display: block;
         `
     }
 }

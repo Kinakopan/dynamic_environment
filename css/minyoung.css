@@ -20,19 +20,14 @@ the-clickable {
   margin-bottom: 2em;
 }
 
-.first{
-  display: flex;
-  flex-direction: column;
-}
-
-.box4_3 {
+#first {
   display: flex;
   justify-content: space-around;
   width: 80vw;
   
 }
 
-.box4_3 > img {
+#first > img {
   width: 10%;
   height: 100%;
 }
@@ -52,7 +47,7 @@ the-clickable {
 
 /* display none */
 
-#first, #second, #last, .box4_2, .box4_3 {
+#first, #second, #last, .box4_2 {
   display: none;
 }
  

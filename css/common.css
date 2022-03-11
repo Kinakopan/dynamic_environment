@@ -33,6 +33,8 @@ body::before {
   flex-direction: column;
   justify-content: stretch;
   width: 100%;
+  background: transparent;
+  z-index: 0;
 
 }
 
