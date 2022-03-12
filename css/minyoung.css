@@ -20,17 +20,27 @@ the-clickable {
   margin-bottom: 2em;
 }
 
-#first {
+.first {
   display: flex;
   justify-content: space-around;
   width: 80vw;
   
 }
 
-#first > img {
+.first > img {
   width: 10%;
   height: 100%;
 }
+
+.second {
+  padding: 2em;
+}
+
+.last {
+  padding: 2em;
+}
+
+
 
 .para4_2 {
   text-align: right;
@@ -47,8 +57,8 @@ the-clickable {
 
 /* display none */
 
-#first, #second, #last, .box4_2 {
-  display: none;
+.first, .second, .last, .box4_2 {
+  opacity: 0;
 }
  
      
