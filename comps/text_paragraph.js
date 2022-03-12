@@ -15,6 +15,7 @@ template_paragraph.innerHTML = `
     color: #EA5C70;
     fontSize: 28px
   }
+
 </style>
 
 <div id="text_paragraph">
@@ -46,11 +47,29 @@ class TheParagraph extends HTMLElement {
         if(this.getAttribute("head_text")){
           this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
         }
-
     }
 
-    //To-do - CREATE THE FUNCTIONALITIES HERE!
-    
+    humanParagraph() {
+      document.querySelector(".humanParaBox").style.cssText= `
+        display: block;
+      `
+
+      document.querySelector(".humanPara").style.cssText= `
+            display: block;
+            padding-top: 30vh;
+          `
+
+      document.querySelector(".continueBtn").style.cssText=`
+        display: block;
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 7px;
+        margin: 30px auto 0;
+      `
+    }
+
 }
 
 //MUST HAVE - define the tag for the custom elements
