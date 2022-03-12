@@ -75,6 +75,7 @@ template_smoke.innerHTML = `
   }
 </style>
 
+
 <div class="smokeContainer">
   <img class="house" src="/img/icon/farm.png" alt="house">
   <img class="smoke smoke1" src="/img/icon/smoke.png" alt="smoke">

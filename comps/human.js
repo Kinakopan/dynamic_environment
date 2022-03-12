@@ -47,6 +47,7 @@ template_human.innerHTML = `
   }
 </style>
 
+
 <div class="humanContainer">
   <img class="human human1" src="/img/icon/human.png" alt="blooding human">
   <img class="human human2" src="/img/icon/human.png" alt="blooding human">
@@ -94,7 +95,6 @@ class TheHuman extends HTMLElement {
     }
 
 }
-
 
 //MUST HAVE - define the tag for the custom elements
 customElements.define("the-human", TheHuman)

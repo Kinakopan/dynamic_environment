@@ -24,7 +24,7 @@
   width: 100%;
 }
 
-/* Create the animation... */
+/*
 @keyframes popup {
   from {
     opacity: 0;
@@ -32,10 +32,9 @@
   to {
     opacity: 100%;
   }
-}
+} */
 
-/* ...and then apply it: */
-.blooding {
+/* .blooding {
   animation: popup 1000ms;
 }
 
@@ -60,4 +59,4 @@ body {
 }
 .blodding4 {
     animation-delay: 3s;
-}
+} */

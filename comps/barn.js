@@ -41,8 +41,8 @@ template_barn.innerHTML = `
     opacity: 1;
     transform: translateY(0);
   }
-
 </style>
+
 
 <div class="barnContainer">
     <div class="barnBox barnBox1">
