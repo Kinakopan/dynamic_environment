@@ -21,7 +21,7 @@ body {
 body::before {
   content: "";
   display: block;
-  padding-top: 586%;
+  padding-top: 700%;
 }
 
 .contentsWrap {
@@ -60,4 +60,3 @@ body::before {
 #section4 {
   flex: 2;
 }
-
