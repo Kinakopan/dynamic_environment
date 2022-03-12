@@ -45,12 +45,12 @@ class TheButton extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text')
-        document.querySelector("#clicked").onclick = () => {
+        document.querySelector(".clickable").onclick = () => {
             this.buttonAppear();
             this.showParagraph();
         }
 
-         document.querySelector("#button").onclick = () => {
+         document.querySelector(".specialButton").onclick = () => {
             this.buttonDisappear();
             this.disableParagraph();
             document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
