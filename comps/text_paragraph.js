@@ -16,7 +16,6 @@ template_paragraph.innerHTML = `
     color: #EA5C70;
     fontSize: 28px
   }
-
 </style>
 
 <div id="text_paragraph">
@@ -48,6 +47,8 @@ class TheParagraph extends HTMLElement {
         if(this.getAttribute("head_text")){
           this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
         }
+
+        document.querySelector(".continueBtn").onclick = () => this.goToNext();
     }
 
     humanParagraph() {
@@ -56,9 +57,9 @@ class TheParagraph extends HTMLElement {
       `
 
       document.querySelector(".humanPara").style.cssText= `
-            display: block;
-            padding-top: 30vh;
-          `
+        display: block;
+        padding-top: 30vh;
+      `
 
       document.querySelector(".continueBtn").style.cssText=`
         display: block;
@@ -66,9 +67,28 @@ class TheParagraph extends HTMLElement {
         color: #fff;
         border: none;
         padding: 5px 10px;
-        border-radius: 7px;
+        border-radius: 15px;
         margin: 30px auto 0;
       `
+    }
+
+    goToNext() {
+      document.querySelector(".humanParaBox").style.cssText = `
+        display: none;
+      `
+
+      document.querySelector("#human").humanDisappear();
+
+      // document.querySelector(".humanParaBox").style.cssText= `
+      //   display: none;
+      // `
+      // document.querySelector(".humanPara").style.cssText= `
+      //   display: none;
+      // `
+      // document.querySelector("#human").style.cssText= `
+      //   opacity: 0;
+      // `
+      document.querySelector("#smoke").smokeDisappear();
     }
 
 }
