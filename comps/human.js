@@ -20,14 +20,14 @@ template_human.innerHTML = `
     justify-content: flex-start;
     margin-left: 5%;
     top: 15%;
-    display: none;
+    opacity: 0;
   }
 
   .human {
     width: 50%;
     height: auto;
     transform: translateX(-50%);
-    display: none;
+    opacity: 0;
   }
   .human {
     transform: translateX(-50%);
@@ -73,9 +73,11 @@ class TheHuman extends HTMLElement {
     }
 
     humanAppear() {
-
+      document.querySelector("#human").style.cssText= `
+        opacity: 1;
+      `
       this.shadowRoot.querySelector(".humanContainer").style.cssText= `
-        display: flex;
+        opacity: 1;
       `
       let target = this.shadowRoot.querySelectorAll('.human');
       let time = 500;
@@ -83,7 +85,7 @@ class TheHuman extends HTMLElement {
       target.forEach(el => {
         setTimeout(() => {
           el.style.cssText= `
-            display: block;
+            opacity: 1;
           `
         }, time)
 
@@ -97,6 +99,21 @@ class TheHuman extends HTMLElement {
       }
     }
 
+    humanDisappear() {
+
+      let target = this.shadowRoot.querySelectorAll('.human');
+      target.forEach(el => {
+        el.style.cssText= `
+          opacity: 0;
+        `
+      })
+      this.shadowRoot.querySelector(".humanContainer").style.cssText= `
+        opacity: 0;
+      `
+      document.querySelector("#human").style.cssText= `
+        opacity: 0;
+      `
+    }
 }
 
 //MUST HAVE - define the tag for the custom elements

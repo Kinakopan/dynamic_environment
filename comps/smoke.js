@@ -71,7 +71,7 @@ template_smoke.innerHTML = `
     left: 20%;
     width: 20%;
     transform: rotateY(180deg) rotateZ(30deg) translateY(-50%);
-    display: none;
+    opacity: 0;
   }
 </style>
 
@@ -114,7 +114,7 @@ class TheSmoke extends HTMLElement {
             display: none;
           `
           this.shadowRoot.querySelector(".knife").style.cssText= `
-            display: block;
+            opacity: 1;
           `
           document.querySelector("#human").humanAppear();
         }
@@ -139,6 +139,36 @@ class TheSmoke extends HTMLElement {
           display: block;
         `
         }, 3200);
+    }
+
+    smokeDisappear() {
+      this.shadowRoot.querySelector('.knife').style.cssText= `
+        opacity: 0;
+      `
+
+      let targetSmoke = this.shadowRoot.querySelectorAll('.smoke');
+      targetSmoke.forEach(el => {
+        el.style.cssText= `
+          display: none;
+        `
+      })
+
+      // let targetSmoke = this.shadowRoot.querySelectorAll('.smoke');
+      // let newSmoke = targetSmoke.forEach();
+      // console.log(newSmoke);
+
+      // function reverseSmoke(newSmoke) {
+      //   reverseSmoke = newSmoke.reverse();
+      //   return reverseSmoke;
+      // }
+
+      // let time = 500;
+      // setTimeout(
+      //   reverseSmoke.style.cssText = `
+      //     display: none;
+      //   `, time
+      // )
+      // time += 500;
     }
 }
 

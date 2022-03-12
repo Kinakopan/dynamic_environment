@@ -75,7 +75,7 @@ class TheBarn extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_barn.content.cloneNode(true)); //use the template to make a clone
 
-        this.shadowRoot.querySelector(".barnBox1").onclick = () => this.barnAppear();
+        this.shadowRoot.querySelector(".barn1").onclick = () => this.barnAppear();
     }
 
     barnAppear() {
