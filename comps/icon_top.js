@@ -81,6 +81,11 @@ class TheTop extends HTMLElement {
         document.querySelector("#top").onclick = () => this.backToTop();
     }
 
+    
+    
+
+
+
     //To-do - CREATE THE FUNCTIONALITIES HERE!
 
     backToTop() {

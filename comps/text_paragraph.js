@@ -4,10 +4,11 @@ var template_paragraph = document.createElement("template"); //<template> </temp
 template_paragraph.innerHTML = `
 <style>
   #text_paragraph {
+    font-family: 'Helvetica Neue',sans-serif;
     color: #fff;
     display: inline-block;
-    width: 200px;
-    font-size: 20px;
+    width: 600px;
+    font-size: 28px;
     padding: 10px 15px;
   }
 
