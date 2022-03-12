@@ -10,7 +10,7 @@ html, body {
   min-height: 1877px;
 }
 body {
-  background-image: url("../img/background.png");
+  /* background-image: url("../img/background.png"); */
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
@@ -47,16 +47,20 @@ body::before {
 
 #section1 {
   flex:1.3;
+  background-image: url("../img/bg1.png");
 }
 
 #section2 {
   flex: 3.2;
+  background-image: url("../img/bg2.png");
 }
 
 #section3 {
  flex: 0.8;
+ background-image: url("../img/bg3.png");
 }
 
 #section4 {
   flex: 2;
+  background-image: url("../img/bg4.png");
 }
