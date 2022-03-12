@@ -7,9 +7,8 @@ template_paragraph.innerHTML = `
     font-family: 'Helvetica Neue',sans-serif;
     color: #fff;
     display: inline-block;
-    width: 600px;
+    width: 100%;
     font-size: 28px;
-    padding: 10px 15px;
   }
 
   #text_paragraph > span {

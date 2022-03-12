@@ -37,11 +37,14 @@ body::before {
   position: relative;
   display: inline-block;
   width: 100%;
-  /* padding: 50px; */
+  padding: 30px;
+  margin: 0;
+  align-items: center;
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
   background-position: top;
+  overflow: hidden;
 }
 
 #section1::after,
@@ -69,6 +72,10 @@ body::before {
 #section1 {
   flex:1;
   background-image: url("../img/bg1.png");
+}
+
+the-scroll {
+  z-index: 2;
 }
 
 .humanParaBox {
