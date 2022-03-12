@@ -90,7 +90,11 @@ class TheHuman extends HTMLElement {
         time += 500;
       })
 
-      setTimeout(startAnimation(), 3200);
+      setTimeout(myStartAnime, time);
+
+      function myStartAnime() {
+        document.querySelector(".humanPara").humanParagraph();
+      }
     }
 
 }
