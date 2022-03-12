@@ -19,8 +19,7 @@ template_human.innerHTML = `
     transform: translateX(-50%);
     justify-content: flex-start;
     margin-left: 5%;
-    padding-top: 10%;
-    top: 0;
+    top: 15%;
     display: none;
   }
 

@@ -13,7 +13,6 @@ template_barn.innerHTML = `
 
   .barnContainer {
     bottom: 50px;
-    // height: 100px;
     height: 100%;
     flex-direction: row-reverse;
     align-items: flex-end;
