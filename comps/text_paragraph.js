@@ -4,10 +4,11 @@ var template_paragraph = document.createElement("template"); //<template> </temp
 template_paragraph.innerHTML = `
 <style>
   #text_paragraph {
+    font-family: 'Helvetica Neue',sans-serif;
     color: #fff;
     display: inline-block;
-    width: 200px;
-    font-size: 20px;
+    width: 600px;
+    font-size: 28px;
     padding: 10px 15px;
   }
 
@@ -47,10 +48,49 @@ class TheParagraph extends HTMLElement {
           this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
         }
 
+        document.querySelector(".continueBtn").onclick = () => this.goToNext();
     }
 
-    //To-do - CREATE THE FUNCTIONALITIES HERE!
-    
+    humanParagraph() {
+      document.querySelector(".humanParaBox").style.cssText= `
+        display: block;
+      `
+
+      document.querySelector(".humanPara").style.cssText= `
+        display: block;
+        padding-top: 30vh;
+      `
+
+      document.querySelector(".continueBtn").style.cssText=`
+        display: block;
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 15px;
+        margin: 30px auto 0;
+      `
+    }
+
+    goToNext() {
+      document.querySelector(".humanParaBox").style.cssText = `
+        display: none;
+      `
+
+      document.querySelector("#human").humanDisappear();
+
+      // document.querySelector(".humanParaBox").style.cssText= `
+      //   display: none;
+      // `
+      // document.querySelector(".humanPara").style.cssText= `
+      //   display: none;
+      // `
+      // document.querySelector("#human").style.cssText= `
+      //   opacity: 0;
+      // `
+      document.querySelector("#smoke").smokeDisappear();
+    }
+
 }
 
 //MUST HAVE - define the tag for the custom elements
