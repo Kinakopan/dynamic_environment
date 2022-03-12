@@ -6,10 +6,10 @@ template_points.innerHTML = `
   #iconBox {
     background: #E5E5E5;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto;
     box-shadow: 0px 8px 6px 0px #b9b9b9;
-    padding: 20px;
+    padding: 15px;
     box-sizing: border-box;
     cursor: pointer;
   }

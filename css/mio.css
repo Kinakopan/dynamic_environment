@@ -1,21 +1,3 @@
-#section2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.clickable_earth {
-  flex: 2.5;
-}
-
-.clickable_airplane {
-  flex: 1.5;
-}
-
-#section1 {
-  margin: 0 auto;
-  position: relative;
-}
-
 .barnContainer,
 .smokeContainer,
 .humanContainer {
@@ -24,6 +6,13 @@
   width: 100%;
 }
 
+the-clickable {
+  margin-left: 7%;
+}
+
+the-points {
+  width: 30%;
+}
 /*
 @keyframes popup {
   from {
@@ -60,3 +49,9 @@ body {
 .blodding4 {
     animation-delay: 3s;
 } */
+
+
+.box2_1, .box2_2{
+    justify-content: space-between;
+
+  }
