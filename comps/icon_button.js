@@ -17,7 +17,7 @@ template_button.innerHTML = `
   letter-spacing: 1px;
   opacity: 0;
   float: right;
-  z-index: 2;
+  z-index: 500;
   position: relative;
  } 
 
@@ -44,17 +44,50 @@ class TheButton extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text')
-        document.querySelector(".clickable").onclick = () => {
+        this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text');
+     
+        document.querySelector(".clickable_earth").onclick = () => {
+            this.buttonAppear();
+            this.showParagraph();
+        }
+        document.querySelector(".clickable_airplane").onclick = () => {
+            this.buttonAppear();
+            this.showParagraph();
+        }
+        document.querySelector(".clickable_waste").onclick = () => {
+            this.buttonAppear();
+            this.showParagraph();
+        }
+        document.querySelector(".clickable_bear").onclick = () => {
             this.buttonAppear();
             this.showParagraph();
         }
 
-         document.querySelector(".specialButton").onclick = () => {
+        // ------for the button------
+
+        document.querySelector(".button1").onclick = () => {
             this.buttonDisappear();
             this.disableParagraph();
             document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
-            }
+        }
+
+        document.querySelector(".button2").onclick = () => {
+            this.buttonDisappear();
+            this.disableParagraph();
+            document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        } 
+
+        document.querySelector(".button3").onclick = () => {
+            this.buttonDisappear();
+            this.disableParagraph();
+            document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        } 
+
+        document.querySelector(".button4").onclick = () => {
+            this.buttonDisappear();
+            this.disableParagraph();
+            document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        }
             
 
     }
@@ -62,7 +95,7 @@ class TheButton extends HTMLElement {
     buttonDisappear() {
         this.shadowRoot.querySelector("#button").style.cssText = `opacity: 0;`
     }
-    
+
     buttonAppear() {
         this.shadowRoot.querySelector("#button").style.cssText = `opacity: 100;`
     }
@@ -78,7 +111,6 @@ class TheButton extends HTMLElement {
         `;
         document.querySelector(".second").style.cssText = `
         opacity: 100;
-        text-align: right;
         `;
         document.querySelector(".last").style.cssText = `
         opacity: 100;
@@ -86,24 +118,9 @@ class TheButton extends HTMLElement {
     }
 
     disableParagraph() {
-        document.querySelector(".afterClick").style.cssText = `
-        opacity: 0;
-        `
-        document.querySelector("the-paragraph").style.cssText = `
-        opacity: 0;
-        `
-        document.querySelector("#section4 > div.first.afterClick > img").style.cssText = `
-        opacity: 0;
-        `
-        document.querySelector("#section4 > div.first.afterClick > .fish1").style.cssText = `
-        opacity: 0;
-        `
-        document.querySelector("#section4 > div.first.afterClick > .fish2").style.cssText = `
-        opacity: 0;
-        `
-        document.querySelector(".para4_2").style.cssText = `
-        opacity: 0;
-        `
+        document.querySelector(".last").style.cssText = `opacity: 0;`
+        document.querySelector(".second").style.cssText = `opacity: 0;`
+        document.querySelector(".first").style.cssText = `opacity: 0;`
     }
 }
 //MUST HAVE - define the tag for the custom elements 
