@@ -5,22 +5,23 @@ template_paragraph.innerHTML = `
 <style>
   #text_paragraph {
     font-family: 'Helvetica Neue',sans-serif;
-    color: #fff;
     display: inline-block;
     width: 100%;
+  }
+
+  #text_paragraph p {
+    color: #fff;
+    display: inline-block;
     font-size: 28px;
   }
 
-  #text_paragraph > span {
+  #text_paragraph span {
     color: #EA5C70;
     fontSize: 28px
   }
 </style>
 
 <div id="text_paragraph">
-  Lorem Ipsum
-  <span>80%</span>
-  Description
 </div>
 `;
 
@@ -39,12 +40,28 @@ class TheParagraph extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_paragraph.content.cloneNode(true)); //use the template to make a clone
 
-        if(this.getAttribute("head_text")){
-          this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
+        // if(this.getAttribute("head_text")){
+        //   this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
+        // }
+
+        // if(this.getAttribute("text_color")){
+        //   this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
+        // }
+
+        if(this.getAttribute("para_p")){
+          let newElP = document.createElement("p");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP);
+          let targetP = this.getAttribute("para_p");
+
+          targetP.forEach(el => {
+            newElement.innerHTML = this.getAttribute("para_p");
+          })
         }
 
-        if(this.getAttribute("head_text")){
-          this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
+        if(this.getAttribute("para_span")){
+          let newElSpan = document.createElement("span");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan);
+          newElement.innerHTML = this.getAttribute("para_span");
         }
 
         document.querySelector(".continueBtn").onclick = () => this.goToNext();
@@ -75,18 +92,7 @@ class TheParagraph extends HTMLElement {
       document.querySelector(".humanParaBox").style.cssText = `
         display: none;
       `
-
       document.querySelector("#human").humanDisappear();
-
-      // document.querySelector(".humanParaBox").style.cssText= `
-      //   display: none;
-      // `
-      // document.querySelector(".humanPara").style.cssText= `
-      //   display: none;
-      // `
-      // document.querySelector("#human").style.cssText= `
-      //   opacity: 0;
-      // `
       document.querySelector("#smoke").smokeDisappear();
     }
 
