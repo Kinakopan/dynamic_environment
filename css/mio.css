@@ -6,13 +6,41 @@
   width: 100%;
 }
 
+the-scroll {
+  z-index: 2;
+}
+
+the-title {
+  display: block;
+  width: 100%;
+  margin: 50px auto;
+}
+
 the-clickable {
   margin-left: 7%;
+  display: inline-block;
+}
+
+the-paragraph {
+    display: inline-block;
+    width: calc(100% - 7% - 145px);
+    text-align: left;
+    margin: 20px 0;
+}
+
+the-clickable + the-paragraph {
+  margin-left: 40px;
+}
+
+the-paragraph + the-clickable {
+  margin-right: 40px;
 }
 
 the-points {
   width: 30%;
 }
+
+
 /*
 @keyframes popup {
   from {
