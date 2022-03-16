@@ -10,12 +10,13 @@ template_paragraph.innerHTML = `
   }
 
   #text_paragraph p {
-    color: #fff;
     display: inline-block;
+    color: #fff;
     font-size: 28px;
   }
 
   #text_paragraph span {
+    display: inline-block;
     color: #EA5C70;
     fontSize: 28px
   }
@@ -48,21 +49,34 @@ class TheParagraph extends HTMLElement {
         //   this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
         // }
 
-        if(this.getAttribute("para_p")){
+
+        if(this.getAttribute("para_p") || this.getAttribute("para_span")){
           let newElP = document.createElement("p");
           this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP);
-          let targetP = this.getAttribute("para_p");
+          // let targetP = this.getAttribute("para_p");
+          newElP.innerHTML = this.getAttribute("para_p");
+
+          let newElSpan = document.createElement("span");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan);
+          newElSpan.innerHTML = this.getAttribute("para_span");
 
           targetP.forEach(el => {
             newElement.innerHTML = this.getAttribute("para_p");
           })
-        }
+    }
 
-        if(this.getAttribute("para_span")){
-          let newElSpan = document.createElement("span");
-          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan);
-          newElement.innerHTML = this.getAttribute("para_span");
-        }
+        // if(this.getAttribute("para_p")){
+        //   let newElP = document.createElement("p");
+        //   this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP);
+        //   // let targetP = this.getAttribute("para_p");
+        //   newElP.innerHTML = this.getAttribute("para_p");
+        // }
+
+        // if(this.getAttribute("para_span")){
+        //   let newElSpan = document.createElement("span");
+        //   this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan);
+        //   newElSpan.innerHTML = this.getAttribute("para_span");
+        // }
 
         document.querySelector(".continueBtn").onclick = () => this.goToNext();
     }
