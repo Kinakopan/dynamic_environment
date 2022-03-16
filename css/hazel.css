@@ -1,5 +1,5 @@
 .box2_1, .box2_2{
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-content: center;
     margin-top: 3em;
@@ -10,3 +10,13 @@
     text-align: center;
     margin-bottom: 20%;  
 }
+
+/*.scroll{
+  position: sticky;
+  bottom: 5;
+}
+*/
+.show {
+  display: flex; 
+} 
+
