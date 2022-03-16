@@ -15,26 +15,48 @@ the-clickable {
 .box4_1 {
   display: flex;
   justify-content: space-around;
-  align-content: center;
+  align-content: flex-start;
   margin-top: 3em;
   margin-bottom: 2em;
 }
 
-#first {
+#section4 > .first {
   display: flex;
-  justify-content: space-around;
-  width: 80vw;
-  
+  width: 100%;
+  flex-direction: column;
+  align-content: center;
 }
 
-#first > img {
-  width: 10%;
-  height: 100%;
+.first > .fishBox {
+  display: flex;
+  height: 20vh;
+  width: auto;
+  justify-content: flex-end;
 }
 
-.para4_2 {
-  text-align: right;
+.first > div > img {
+  width: auto;
+  max-height: 50%;
+  margin: 2em;
 }
+
+.fish1 {
+  align-self: baseline;
+}
+
+.fish2 {
+  align-self: flex-end;
+}
+
+
+.second {
+  padding: 2em;
+}
+
+.last {
+  padding: 2em;
+}
+
 
 @keyframes slide-in {
   from {
@@ -47,8 +69,8 @@ the-clickable {
 
 /* display none */
 
-#first, #second, #last, .box4_2 {
-  display: none;
-}
+.first, .second, .last {
+  opacity: 0;
+} 
  
-     
+ 

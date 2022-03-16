@@ -5,6 +5,8 @@ var template_title = document.createElement("template"); //<template> </template
 template_title.innerHTML = `
 <style>
 #title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
   font-size: 40px;
   text-shadow: 3px 3px 2px #00000050;
   text-transform: capitalize;

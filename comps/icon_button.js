@@ -5,7 +5,7 @@ var template_button = document.createElement("template"); //<template> </templat
 template_button.innerHTML = `
 <style>
 
- #button {
+ .button {
   background: #ffe600;
   border-radius: 5px;
   width: 70px;
@@ -15,16 +15,16 @@ template_button.innerHTML = `
   color: #2D436A;
   font-weight: bold;
   letter-spacing: 1px;
-  display: none;
+  opacity: 0;
   float: right;
-  z-index: 2;
- position: relative;
+  z-index: 500;
+  position: relative;
  } 
 
 
 </style>
 
-<button id="button" type="button">
+<button class="button" type="button">
 </button>
 
 `;
@@ -44,44 +44,143 @@ class TheButton extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector("#button").innerHTML = this.getAttribute('button_text')
-        document.querySelector("#clicked").onclick = () => {
-            this.buttonAppear();
-            this.showParagraph();
-        }
+        this.shadowRoot.querySelector(".button").innerHTML = this.getAttribute('button_text');
 
-         document.querySelector("#button").onclick = () => {
-            this.buttonDisappear();
-            }
+
+        let trigger = this.getAttribute("trigger");
+        let buttonDoc = document.querySelector(`#${trigger}`);
+        
+
+
+     this.shadowRoot.querySelector(".button").onclick = () => {
+
+        buttonDoc.disappearParagraph();
+        this.buttonDisappear();
+     }
+
+
+        //-----First try-----//
+        // document.querySelector(".clickable").onclick = () => this.getAttribute('section')
+
+        // if(this.getAttribute('section') === '2') {
+        //     this.buttonAppear();
+        //     this.showParagraph();
+        // }
+
+        //----second try----//
+        // let liArray = document.querySelectorAll(".clickable");
+        // console.log(liArray)
+
+        // let aButton = document.querySelector(`#trigger`)
+        
+        // console.log(`ID: ${this.id}`);
+        // let buttonDoc = document.querySelector(`#${this.id}`);
+
+        // this.buttonAppear()
+        // buttonDoc.onclick = () => { this.buttonAppear() };
+        // console.log(buttonDoc)
+
+        
+        // this.addEventListener("click", () => {console.log("hi")})
+        // console.log(this)
+        // this.onclick = (trigger) => console.log(`clicked ${trigger}`);
+        // liArray[i].onclick = () => {
+        //     console.log(this.id)
+        //     this.buttonAppear();
+        //     this.showParagraph();
+        // }
+        
+        // for ( var i =0; i < liArray.length; i++) {
+        //     liArray[i].onclick = () => {
+        //         console.log(this.id)
+        //         this.buttonAppear();
+        //         this.showParagraph();
+        //     }
+        // }
+
+
+     
+        // document.querySelector(".clickable_earth").onclick = () => {
+        //     this.buttonAppear();
+        //     this.showParagraph();
+        // }
+        // document.querySelector(".clickable_airplane").onclick = () => {
+        //     this.buttonAppear();
+        //     this.showParagraph();
+        // }
+        // document.querySelector(".clickable_waste").onclick = () => {
+        //     this.buttonAppear();
+        //     this.showParagraph();
+        // }
+        // document.querySelector(".clickable_bear").onclick = () => {
+        //     this.buttonAppear();
+        //     this.showParagraph();
+        // }
+
+        // ------for the button------
+
+        // let buttonAttr = document.querySelectorAll("the-button").getAttribute("class");
+        
+        // if(buttonAttr = "button1")
+
+        // document.querySelector(".button1").onclick = () => {
+        //     this.buttonDisappear();
+        //     this.disableParagraph();
+        //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        // }
+
+        // document.querySelector(".button2").onclick = () => {
+        //     this.buttonDisappear();
+        //     this.disableParagraph();
+        //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        // } 
+
+        // document.querySelector(".button3").onclick = () => {
+        //     this.buttonDisappear();
+        //     this.disableParagraph();
+        //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        // } 
+
+        // document.querySelector(".button4").onclick = () => {
+        //     this.buttonDisappear();
+        //     this.disableParagraph();
+        //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
+        // }
             
 
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     buttonDisappear() {
-        this.shadowRoot.querySelector("#button").style.cssText = `display: none;`
+        this.shadowRoot.querySelector(".button").style.cssText = `opacity: 0;`
     }
     
     buttonAppear() {
-        this.shadowRoot.querySelector("#button").style.cssText = `display: block;`
+        this.shadowRoot.querySelector(".button").style.cssText = `opacity: 1;`
     }
 
     showParagraph() {
-        document.querySelector("#first").style.cssText = `
-        display: block;
+
+        document.querySelector(".first").style.cssText = `
+        opacity: 100;
         position: relative;
         z-index: 2;
-        margin-left: 50%;
         animation: slide-in 1000ms;
+       
         `;
-        document.querySelector("#second").style.cssText = `
-        display: block;
-        float: right;
+        document.querySelector(".second").style.cssText = `
+        opacity: 100;
         `;
-        document.querySelector("#last").style.cssText = `
-        display: block;
+        document.querySelector(".last").style.cssText = `
+        opacity: 100;
         `
     }
-}
 
+    disappearParagraph() {
+        document.querySelector(".last").style.cssText = `opacity: 0;`
+        document.querySelector(".second").style.cssText = `opacity: 0;`
+        document.querySelector(".first").style.cssText = `opacity: 0;`
+    }
+}
 //MUST HAVE - define the tag for the custom elements 
 customElements.define("the-button", TheButton)
+

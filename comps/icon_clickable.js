@@ -53,8 +53,8 @@ template_clickable.innerHTML = `
 #contentsWrap {
   z-index: 1;
 }
-
 </style>
+
 
 <div id="clickableBox">
   <img src="./img/icon/cow.png"  alt="" max-width="100%" max-height="100%">
@@ -76,8 +76,15 @@ class TheClickable extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_clickable.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector("#clickableBox").onclick = () => this.startAnimation();
         
+        let trigger = this.getAttribute("trigger");
+        let buttonDoc = document.querySelector(`#${trigger}`);
+ 
+        this.shadowRoot.querySelector("#clickableBox").onclick = () => { 
+          this.startAnimation()
+          buttonDoc.buttonAppear();
+          buttonDoc.showParagraph();
+        };
 
         if(this.getAttribute("icon_image")){
           this.shadowRoot.querySelector("#clickableBox > img").src = this.getAttribute("icon_image");
@@ -99,7 +106,7 @@ class TheClickable extends HTMLElement {
 
       console.log(binRect.left, binRect.right);
       let destX = (binRect.left+binRect.right)/2;
-      let destY = (binRect.top+binRect.bottom)/36;  
+      let destY = (binRect.top+binRect.bottom)/36;
       let timer = null;
       let x = 0,y = 0;
       clearInterval(timer);
@@ -115,7 +122,7 @@ class TheClickable extends HTMLElement {
         }
       }
     }
-    
+
 
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!

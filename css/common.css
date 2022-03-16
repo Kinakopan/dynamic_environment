@@ -5,23 +5,19 @@
 }
 
 html, body {
-  min-width: 320px;
   width: 100%;
+  min-width: 320px;
   min-height: 1877px;
-}
-body {
-  background-image: url("../img/background.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
   position: relative;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 body::before {
   content: "";
   display: block;
-  padding-top: 586%;
+  padding-top: 935%;
+  /* ↓ don't delete this cuz might use this later */
+  /* background: linear-gradient(180deg, rgb(129 185 191) 15%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 72%, rgb(152 197 127) 80%); */
+  background: linear-gradient(180deg, rgb(129 185 191) 15%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 52%, rgb(152 197 127) 80%)
 }
 
 .contentsWrap {
@@ -31,33 +27,82 @@ body::before {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: space-between;
   width: 100%;
   background: transparent;
   z-index: 0;
-
 }
 
 .section {
   position: relative;
   display: inline-block;
   width: 100%;
-  padding: 50px;
+  padding: 30px;
+  margin: 0;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  background-position: top;
+  overflow: hidden;
+}
+
+#section1::after,
+#section2::after,
+#section3::after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+}
+
+#section1::after {
+  background: #80b7bc;
+}
+
+#section1::after {
+  background: #a2dbe4;
+}
+
+#section1::after {
+  background: #9ec785;
 }
 
 #section1 {
-  flex:1.3;
+  flex:1;
+  background-image: url("../img/bg1.png");
+}
+
+the-scroll {
+  z-index: 2;
+}
+
+.humanParaBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: transparent;
+  display: none;
+  background: rgba(0,0,0,.6);
+  text-align: center;
+  z-index: 2;
 }
 
 #section2 {
   flex: 3.2;
+  background-image: url("../img/bg2.png");
 }
 
 #section3 {
- flex: 0.8;
+  flex: 0.8;
+  background-image: url("../img/bg3.png");
 }
 
 #section4 {
   flex: 2;
+  background-image: url("../img/bg4.png");
+  background-position: bottom;
 }
-
