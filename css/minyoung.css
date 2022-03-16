@@ -20,20 +20,20 @@ the-clickable {
   margin-bottom: 1em;
 }
 
-#section4 > .first {
+#section4 > .last {
   display: flex;
   width: 90%;
   flex-direction: column; 
 }
 
-.first > .fishBox {
+.last > .fishBox {
   display: flex;
   height: 18vh;
   width: auto;
   align-items: flex-end;
 }
 
-.first > div > img {
+.last > div > img {
   width: auto;
   max-height: 50%;
   margin: 1em;
@@ -52,7 +52,7 @@ the-clickable {
   padding: 1em;
 }
 
-.last {
+.first {
   padding: 1em;
 }
 
@@ -60,11 +60,23 @@ the-clickable {
 @keyframes slide-in {
   from {
     transform: translateY(-100%);
+    opacity: 0;
   }
   to {
     transform: translate(0%);
+    opacity: 1;
   }
 }
+
+@keyframes fade-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* display none */
 

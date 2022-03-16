@@ -19,7 +19,7 @@ template_button.innerHTML = `
   float: right;
   z-index: 500;
   position: absolute;
-  bottom: 3%;
+  bottom: 10%;
   left: 50%
  } 
 
@@ -55,7 +55,6 @@ class TheButton extends HTMLElement {
 
 
      this.shadowRoot.querySelector(".button").onclick = () => {
-
         buttonDoc.disappearParagraph();
         this.buttonDisappear();
      }
@@ -166,15 +165,22 @@ class TheButton extends HTMLElement {
         opacity: 100;
         position: relative;
         z-index: 2;
-        animation: slide-in 1000ms;
-       
+        animation: fade-out 1000ms;
         `;
+
         document.querySelector(".second").style.cssText = `
-        opacity: 100;
+        animation: slide-in 1000ms;
+        animation-delay: 1000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
         `;
+
         document.querySelector(".last").style.cssText = `
-        opacity: 100;
-        `
+        animation: slide-in 1000ms;
+        animation-delay: 2000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
+        `;
     }
 
     disappearParagraph() {
