@@ -50,10 +50,6 @@ template_clickable.innerHTML = `
   max-height: 100%;
 }
 
-.contentsWrap_bg {
-  background: rgba(0,0,0,0.8);
-}
-
 </style>
 
 

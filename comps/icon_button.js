@@ -5,21 +5,25 @@ var template_button = document.createElement("template"); //<template> </templat
 template_button.innerHTML = `
 <style>
 
- .button {
-  background: #ffe600;
-  border-radius: 5px;
-  width: 5em;
-  height: 1.8em;
-  border: none;
-  font-size: 1.2em;
-  color: #2D436A;
-  font-weight: bold;
-  letter-spacing: 2px;
-  opacity: 0;
-  float: right;
-  z-index: 500;
-  position: relative;
- } 
+.button {
+    background: #ffe600;
+    border-radius: 5px;
+    width: 70px;
+    height: 20px;
+    border: none;
+    font-size: 0.8em;
+    color: #2D436A;
+    font-weight: bold;
+    letter-spacing: 1px;
+//      opacity: 0;
+    display: none;
+    float: right;
+    z-index: 500;
+    position: relative;
+    position: absolute;
+    right: 50px;
+}
+
 
 
 </style>
@@ -49,7 +53,7 @@ class TheButton extends HTMLElement {
 
         let trigger = this.getAttribute("trigger");
         let buttonDoc = document.querySelector(`#${trigger}`);
-        
+
 
 
      this.shadowRoot.querySelector(".button").onclick = () => {
@@ -71,7 +75,7 @@ class TheButton extends HTMLElement {
         // console.log(liArray)
 
         // let aButton = document.querySelector(`#trigger`)
-        
+
         // console.log(`ID: ${this.id}`);
         // let buttonDoc = document.querySelector(`#${this.id}`);
 
@@ -79,7 +83,7 @@ class TheButton extends HTMLElement {
         // buttonDoc.onclick = () => { this.buttonAppear() };
         // console.log(buttonDoc)
 
-        
+
         // this.addEventListener("click", () => {console.log("hi")})
         // console.log(this)
         // this.onclick = (trigger) => console.log(`clicked ${trigger}`);
@@ -88,7 +92,7 @@ class TheButton extends HTMLElement {
         //     this.buttonAppear();
         //     this.showParagraph();
         // }
-        
+
         // for ( var i =0; i < liArray.length; i++) {
         //     liArray[i].onclick = () => {
         //         console.log(this.id)
@@ -98,7 +102,7 @@ class TheButton extends HTMLElement {
         // }
 
 
-     
+
         // document.querySelector(".clickable_earth").onclick = () => {
         //     this.buttonAppear();
         //     this.showParagraph();
@@ -119,7 +123,7 @@ class TheButton extends HTMLElement {
         // ------for the button------
 
         // let buttonAttr = document.querySelectorAll("the-button").getAttribute("class");
-        
+
         // if(buttonAttr = "button1")
 
         // document.querySelector(".button1").onclick = () => {
@@ -132,29 +136,29 @@ class TheButton extends HTMLElement {
         //     this.buttonDisappear();
         //     this.disableParagraph();
         //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
-        // } 
+        // }
 
         // document.querySelector(".button3").onclick = () => {
         //     this.buttonDisappear();
         //     this.disableParagraph();
         //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
-        // } 
+        // }
 
         // document.querySelector(".button4").onclick = () => {
         //     this.buttonDisappear();
         //     this.disableParagraph();
         //     document.querySelector(".contentsWrap").style.cssText = `background: transparent;`;
         // }
-            
+
 
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     buttonDisappear() {
-        this.shadowRoot.querySelector(".button").style.cssText = `opacity: 0;`
+        this.shadowRoot.querySelector(".button").style.cssText = `display: none;`
     }
-    
+
     buttonAppear() {
-        this.shadowRoot.querySelector(".button").style.cssText = `opacity: 1;`
+        this.shadowRoot.querySelector(".button").style.cssText = `display: block;`
     }
 
     showParagraph() {
@@ -194,6 +198,5 @@ class TheButton extends HTMLElement {
         document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
     }
 }
-//MUST HAVE - define the tag for the custom elements 
+//MUST HAVE - define the tag for the custom elements
 customElements.define("the-button", TheButton)
-

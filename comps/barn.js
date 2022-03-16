@@ -81,7 +81,7 @@ class TheBarn extends HTMLElement {
     barnAppear() {
 
       let targetBarn = this.shadowRoot.querySelectorAll('.barnBox');
-      let time = 1000;
+      let time = 100;
 
       targetBarn.forEach(el => {
         setTimeout(() => {

@@ -17,7 +17,7 @@ body::before {
   padding-top: 935%;
   /* ↓ don't delete this cuz might use this later */
   /* background: linear-gradient(180deg, rgb(129 185 191) 15%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 72%, rgb(152 197 127) 80%); */
-  background: linear-gradient(180deg, rgb(129 185 191) 15%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 52%, rgb(152 197 127) 80%)
+  background: linear-gradient(180deg, rgb(129 185 191) 20%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 52%, rgb(152 197 127) 80%)
 }
 
 .contentsWrap {
@@ -74,10 +74,6 @@ body::before {
   background-image: url("../img/bg1.png");
 }
 
-the-scroll {
-  z-index: 2;
-}
-
 .humanParaBox {
   display: flex;
   flex-direction: column;
@@ -94,6 +90,7 @@ the-scroll {
 #section2 {
   flex: 3.2;
   background-image: url("../img/bg2.png");
+  margin-top: 100px;
 }
 
 #section3 {
