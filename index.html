@@ -72,9 +72,18 @@
           text_size="20px"
         ></the-title>
 
+      <the-button
+        class="button1"
+        button_text="next"
+        id="earth"
+        trigger="earth"
+      ></the-button>
+      
       <the-clickable class="clickable clickable_earth"
         icon_image="./img/icon/earth.gif"
         icon_alt="earth"
+        section="2"
+        trigger="earth"
       ></the-clickable>
 
       <div class="box2_1">
@@ -96,10 +105,6 @@
         head_text="20% of the population consumes 80% of natural resources"
       ></the-paragraph>
 
-      <the-button
-        class="button1"
-        button_text="next"
-      ></the-button>
 
       <!-- Airplan part -->
       <the-title
@@ -108,11 +113,19 @@
         text_size="20px"
       ></the-title>
 
+      <the-button
+        class="button2"
+        button_text="next"
+        id="airplane"
+        trigger="airplane"
+      ></the-button>
+
       <the-clickable
         class="clickable clickable_airplane"
         icon_image="./img/icon/airplane.gif"
         icon_alt="airplane"
         icon_margin="0 0 0 auto"
+        trigger="airplane"
       ></the-clickable>
 
       <div class="box2_2">
@@ -134,10 +147,6 @@
         head_text="30% of food consumed in Canada are imported, resulting in food miles of over 61 billion tonnes km"
       ></the-paragraph>
 
-      <the-button
-        class="button2"
-        button_text="next"
-      ></the-button>
 
 
 
@@ -159,11 +168,20 @@
         icon_image="./img/icon/goat.png"
         ></the-points>
       </div>
+
+      <the-button
+      class="button3"
+      button_text="next"
+      id="waste"
+      trigger="waste"
+      ></the-button>
+
         <the-clickable class="clickable clickable_waste"
         onclick="this.paperWasteAnimationCallback()"
           icon_image="./img/icon/paper-waste.png"
           icon_alt="paper waste"
           icon_margin="0 0 0 0 auto"
+          trigger="waste"
         ></the-clickable>
         <div id="recycle-bin" class="paper-waste" style="position: absolute;left:50%;width:20%;bottom:20%">
           <img src="./img/icon/recycle-bin.png" alt="Recyle-bin" style="width: 100%;">
@@ -173,10 +191,6 @@
 
         </div>
 
-        <the-button
-        class="button3"
-        button_text="next"
-      ></the-button>
 
     </div>
     <!-- End of section 3 -->
@@ -212,12 +226,19 @@
       <the-paragraph class="para4_1"
       head_text="Destroys their habitats"
       ></the-paragraph>
-      </div>
-
+    </div>
+  
+      <the-button 
+      class="button4"
+      button_text="next"
+      id="bear"
+      trigger="bear"
+      ></the-button>
 
       <the-clickable 
       class="clickable clickable_bear"
       icon_image="./img/icon/bear.png"
+      trigger="bear"
       ></the-clickable>
 
         <div class="first afterClick">
@@ -235,11 +256,6 @@
         </div>
 
 
-
-        <the-button 
-        class="button4"
-        button_text="next"
-        ></the-button>
 
     </div>
 

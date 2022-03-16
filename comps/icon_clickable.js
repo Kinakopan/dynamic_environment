@@ -76,8 +76,15 @@ class TheClickable extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_clickable.content.cloneNode(true)); //use the template to make a clone
-        this.shadowRoot.querySelector("#clickableBox").onclick = () => this.startAnimation();
-
+        
+        let trigger = this.getAttribute("trigger");
+        let buttonDoc = document.querySelector(`#${trigger}`);
+ 
+        this.shadowRoot.querySelector("#clickableBox").onclick = () => { 
+          this.startAnimation()
+          buttonDoc.buttonAppear();
+          buttonDoc.showParagraph();
+        };
 
         if(this.getAttribute("icon_image")){
           this.shadowRoot.querySelector("#clickableBox > img").src = this.getAttribute("icon_image");
