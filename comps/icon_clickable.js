@@ -50,9 +50,10 @@ template_clickable.innerHTML = `
   max-height: 100%;
 }
 
-#contentsWrap {
-  z-index: 1;
+.contentsWrap_bg {
+  background: rgba(0,0,0,0.8);
 }
+
 </style>
 
 
@@ -76,11 +77,11 @@ class TheClickable extends HTMLElement {
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
     connectedCallback(){
         this.shadowRoot.appendChild(template_clickable.content.cloneNode(true)); //use the template to make a clone
-        
+
         let trigger = this.getAttribute("trigger");
         let buttonDoc = document.querySelector(`#${trigger}`);
- 
-        this.shadowRoot.querySelector("#clickableBox").onclick = () => { 
+
+        this.shadowRoot.querySelector("#clickableBox").onclick = () => {
           this.startAnimation()
           buttonDoc.buttonAppear();
           buttonDoc.showParagraph();
@@ -127,11 +128,21 @@ class TheClickable extends HTMLElement {
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     startAnimation() {
-      document.querySelector(".contentsWrap").style.cssText = `background: rgba(0,0,0,0.8);`
+      document.querySelector(".contentsWrap").classList.add("contentsWrap_bg");
     }
 
     finishAnimation() {
-      document.querySelector(".contentsWrap").style.cssText = `background: transparent;`
+     document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
+    }
+
+    imgShow2_1(){
+      var popup = document.getElementById("points2_1");
+      popup.classList.toggle("show");
+    }
+
+    imgShow2_2(){
+      var popup = document.getElementById("points2_2");
+      popup.classList.toggle("show");
     }
 
 

@@ -8,17 +8,19 @@ template_button.innerHTML = `
  .button {
   background: #ffe600;
   border-radius: 5px;
-  width: 70px;
-  height: 20px;
+  width: 5em;
+  height: 1.8em;
   border: none;
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: #2D436A;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   opacity: 0;
   float: right;
   z-index: 500;
-  position: relative;
+  position: absolute;
+  bottom: 10%;
+  left: 50%
  } 
 
 
@@ -53,7 +55,6 @@ class TheButton extends HTMLElement {
 
 
      this.shadowRoot.querySelector(".button").onclick = () => {
-
         buttonDoc.disappearParagraph();
         this.buttonDisappear();
      }
@@ -161,24 +162,35 @@ class TheButton extends HTMLElement {
     showParagraph() {
 
         document.querySelector(".first").style.cssText = `
-        opacity: 100;
+        opacity: 1;
         position: relative;
         z-index: 2;
-        animation: slide-in 1000ms;
-       
+        animation: fade-out 1000ms;
+
         `;
+
         document.querySelector(".second").style.cssText = `
-        opacity: 100;
+
+        animation: slide-in 1000ms;
+        animation-delay: 1000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
         `;
+
         document.querySelector(".last").style.cssText = `
-        opacity: 100;
-        `
+        animation: slide-in 1000ms;
+        animation-delay: 2000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
+        `;
+
     }
 
     disappearParagraph() {
         document.querySelector(".last").style.cssText = `opacity: 0;`
         document.querySelector(".second").style.cssText = `opacity: 0;`
         document.querySelector(".first").style.cssText = `opacity: 0;`
+        document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
     }
 }
 //MUST HAVE - define the tag for the custom elements 
