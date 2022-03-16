@@ -25,6 +25,7 @@ template_button.innerHTML = `
 }
 
 
+
 </style>
 
 <button class="button" type="button">
@@ -56,7 +57,6 @@ class TheButton extends HTMLElement {
 
 
      this.shadowRoot.querySelector(".button").onclick = () => {
-
         buttonDoc.disappearParagraph();
         this.buttonDisappear();
      }
@@ -164,24 +164,38 @@ class TheButton extends HTMLElement {
     showParagraph() {
 
         document.querySelector(".first").style.cssText = `
-        opacity: 100;
+        opacity: 1;
         position: relative;
-        z-index: 2;
-        animation: slide-in 1000ms;
+        z-index: 3;
+        animation: fade-out 1000ms;
 
         `;
+
         document.querySelector(".second").style.cssText = `
-        opacity: 100;
+        z-index: 100;
+        animation: slide-in 1000ms;
+        animation-delay: 1000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
+        z-index: 3;
         `;
+
         document.querySelector(".last").style.cssText = `
-        opacity: 100;
-        `
+        z-index: 3;
+        animation: slide-in 1000ms;
+        animation-delay: 2000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
+        
+        `;
+
     }
 
     disappearParagraph() {
         document.querySelector(".last").style.cssText = `opacity: 0;`
         document.querySelector(".second").style.cssText = `opacity: 0;`
         document.querySelector(".first").style.cssText = `opacity: 0;`
+        document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
     }
 }
 //MUST HAVE - define the tag for the custom elements
