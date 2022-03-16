@@ -161,17 +161,17 @@ class TheButton extends HTMLElement {
     showParagraph() {
 
         document.querySelector(".first").style.cssText = `
-        opacity: 100;
+        opacity: 1;
         position: relative;
-        z-index: 2;
+        z-index: 5;
         animation: slide-in 1000ms;
        
         `;
         document.querySelector(".second").style.cssText = `
-        opacity: 100;
+        opacity: 1;
         `;
         document.querySelector(".last").style.cssText = `
-        opacity: 100;
+        opacity: 1;
         `
     }
 
@@ -179,6 +179,7 @@ class TheButton extends HTMLElement {
         document.querySelector(".last").style.cssText = `opacity: 0;`
         document.querySelector(".second").style.cssText = `opacity: 0;`
         document.querySelector(".first").style.cssText = `opacity: 0;`
+        document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
     }
 }
 //MUST HAVE - define the tag for the custom elements 
