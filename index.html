@@ -32,11 +32,17 @@
     <the-top id="top">
     </the-top>
 
-    <the-scroll>
+    <the-scroll class="scroll">
     </the-scroll>
 
     <!-- Start of section 1 -->
     <div id="section1" class="section">
+
+      <the-title
+          head_text="Air Pollution"
+          text_color="#DCE8FF"
+          text_size="20px"
+        ></the-title>
 
       <the-barn></the-barn>
 
@@ -82,15 +88,16 @@
         trigger="earth"
       ></the-button>
 
-      <the-clickable class="clickable clickable_earth"
+      <the-clickable onclick="this.imgShow2_1()"
+        class="clickable clickable_earth"
         icon_image="./img/icon/earth.gif"
         icon_alt="earth"
         section="2"
         trigger="earth"
       ></the-clickable>
 
-      <div class="box2_1">
-        <the-points
+      <div class="box2_1" id="points2_1">
+        <the-points 
         icon_image="./img/icon/sun.png"
         ></the-points>
 
@@ -128,7 +135,7 @@
         trigger="airplane"
       ></the-button>
 
-      <the-clickable
+      <the-clickable onclick="this.imgShow2_2()"
         class="clickable clickable_airplane"
         icon_image="./img/icon/airplane.gif"
         icon_alt="airplane"
@@ -136,16 +143,16 @@
         trigger="airplane"
       ></the-clickable>
 
-      <div class="box2_2">
-        <the-points
+      <div class="box2_2" id="points2_2">
+        <the-points 
         icon_image="./img/icon/apple.png"
         ></the-points>
 
-        <the-points
+        <the-points 
         icon_image="./img/icon/avocado.png"
         ></the-points>
 
-        <the-points
+        <the-points 
         icon_image="./img/icon/meat.png"
         ></the-points>
       </div>

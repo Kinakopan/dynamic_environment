@@ -134,6 +134,16 @@ class TheClickable extends HTMLElement {
       document.querySelector(".contentsWrap").style.cssText = `background: transparent;`
     }
 
+    imgShow2_1(){
+      var popup = document.getElementById("points2_1");
+      popup.classList.toggle("show");
+    }
+
+    imgShow2_2(){
+      var popup = document.getElementById("points2_2");
+      popup.classList.toggle("show");
+    }
+
 
 }
 
