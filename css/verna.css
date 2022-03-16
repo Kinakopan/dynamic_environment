@@ -5,13 +5,14 @@
       position: relative;
       align-items: center;
       margin: 0 auto;
+    
     }
     
     .paper-waste{
       position: absolute;
       left:50%;
       width:20%;
-      bottom:20%;
+      bottom:10%;
       display: flex;
       flex-direction: column;
       align-items: center;
