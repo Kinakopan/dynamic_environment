@@ -49,12 +49,13 @@ class TheButton extends HTMLElement {
 
         let trigger = this.getAttribute("trigger");
         let buttonDoc = document.querySelector(`#${trigger}`);
+        
 
 
      this.shadowRoot.querySelector(".button").onclick = () => {
-        // buttonDoc.buttonDisappear();
-        buttonDoc.disappearParagraph();
 
+        buttonDoc.disappearParagraph();
+        this.buttonDisappear();
      }
 
 
@@ -150,7 +151,7 @@ class TheButton extends HTMLElement {
     }
     //To-do - CREATE THE FUNCTIONALITIES HERE!
     buttonDisappear() {
-        this.shadowRoot.querySelector("#button").style.cssText = `opacity: 0;`
+        this.shadowRoot.querySelector(".button").style.cssText = `opacity: 0;`
     }
     
     buttonAppear() {
