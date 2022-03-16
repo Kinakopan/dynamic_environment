@@ -136,16 +136,41 @@ class TheClickable extends HTMLElement {
     }
 
     imgShow2_1(){
-      var popup = document.getElementById("points2_1");
-      popup.classList.toggle("show");
+      // var popup = document.getElementById("points2_1");
+      // popup.classList.toggle("show");
+
+      // var test = document.getElementById("points2_1");
+      // test.classList.toggle("clicked");
+
+
+      // let nextHidden = document.querySelector('div.box2_1 > the-points[class=hidden]');
+      // if(nextHidden)  {
+      //   nextHidden.classList.remove('hidden');
+      //   setTimeout(imgShow2_1, 500);
+      // }
+
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box2_1 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
     }
 
+
+ 
     imgShow2_2(){
-      var popup = document.getElementById("points2_2");
-      popup.classList.toggle("show");
+      // var popup = document.getElementById("points2_2");
+      // popup.classList.toggle("show");
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box2_2 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
     }
-
-
 }
 
 //MUST HAVE - define the tag for the custom elements
