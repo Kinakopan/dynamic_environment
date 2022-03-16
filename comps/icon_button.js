@@ -8,17 +8,19 @@ template_button.innerHTML = `
  .button {
   background: #ffe600;
   border-radius: 5px;
-  width: 70px;
-  height: 20px;
+  width: 5em;
+  height: 1.8em;
   border: none;
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: #2D436A;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   opacity: 0;
   float: right;
   z-index: 500;
-  position: relative;
+  position: absolute;
+  bottom: 3%;
+  left: 50%
  } 
 
 
