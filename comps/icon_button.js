@@ -162,13 +162,15 @@ class TheButton extends HTMLElement {
     showParagraph() {
 
         document.querySelector(".first").style.cssText = `
-        opacity: 100;
+        opacity: 1;
         position: relative;
         z-index: 2;
         animation: fade-out 1000ms;
+
         `;
 
         document.querySelector(".second").style.cssText = `
+
         animation: slide-in 1000ms;
         animation-delay: 1000ms;
         animation-fill-mode: backwards;
@@ -181,12 +183,14 @@ class TheButton extends HTMLElement {
         animation-fill-mode: backwards;
         opacity: 1;
         `;
+
     }
 
     disappearParagraph() {
         document.querySelector(".last").style.cssText = `opacity: 0;`
         document.querySelector(".second").style.cssText = `opacity: 0;`
         document.querySelector(".first").style.cssText = `opacity: 0;`
+        document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
     }
 }
 //MUST HAVE - define the tag for the custom elements 
