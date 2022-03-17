@@ -7,6 +7,7 @@
 html, body {
   width: 100%;
   min-width: 320px;
+  max-width: 320px;
   min-height: 1877px;
   position: relative;
   box-sizing: border-box;
@@ -18,7 +19,7 @@ body::before {
   padding-top: 935%;
   /* ↓ don't delete this cuz might use this later */
   /* background: linear-gradient(180deg, rgb(129 185 191) 15%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 72%, rgb(152 197 127) 80%); */
-  background: linear-gradient(180deg, rgb(129 185 191) 20%,rgb(161 218 227) 30%, rgb(162 219 226) 61%, rgb(171 197 86) 52%, rgb(152 197 127) 80%)
+  background: linear-gradient(180deg, rgb(129 185 191) 20%,rgb(161 218 227) 30%, rgb(162 219 228) 68%, rgb(153 197 126) 68%, rgb(153 197 126) 80%, rgb(45 66 106) 97%)
 }
 
 .contentsWrap {
@@ -51,8 +52,9 @@ body::before {
 }
 
 #section1 {
-  flex: .5;
+  flex: .6;
   background-image: url("../img/bg1.png");
+  padding-top: 100px;
 }
 
 .humanParaBox {
@@ -71,19 +73,19 @@ body::before {
 #section2 {
   flex: 1;
   background-image: url("../img/bg2.png");
-  padding-bottom: 350px;
+  padding-bottom: 430px;
 }
 
 #section3 {
-  flex: 1;
+  flex: 1.8;
   background-image: url("../img/bg3.png");
-  padding: 20px 30px 150px;
+  padding: 120px 30px 0;
 }
 
 #section4 {
-  flex: 1;
+  flex: 1.3;
   background-image: url("../img/bg4.png");
-  background-position: bottom;
+  background-position: center;
 }
 
 .contentsWrap_bg::after {

@@ -93,8 +93,8 @@ body {
 } */
 
 .box2_1, .box2_2{
+    display: flex;
     justify-content: space-between;
-
   }
 
 .clickable_airplane {
@@ -116,12 +116,12 @@ body {
 
 .paper-waste {
   transform: translateX(-50%);
-  width: 35%;
+  width: 25%;
   bottom: 5%;
 }
 
 .clickable_waste {
-  bottom: 20%;
+  bottom: 15%;
 }
 
 img.trees {
@@ -130,4 +130,25 @@ img.trees {
 
 .second {
   padding: 0;
+}
+
+#forest {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  left: 0;
+}
+
+.box3_1 {
+  margin: 0;
+}
+
+.title2_2 {
+  margin: 0;
+}
+
+#section4 {
+  padding-top: 20%;
 }
