@@ -36,7 +36,6 @@ body::before {
 
 .section {
   position: relative;
-  /* display: inline-block; */
   width: 100%;
   padding: 30px;
   margin: 0;

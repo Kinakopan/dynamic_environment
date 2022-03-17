@@ -35,7 +35,6 @@ the-paragraph {
 }
 
 /* for responsive
-
 the-paragraph {
     display: inline-block;
     width: calc(100% - 7% - 145px);
