@@ -11,18 +11,16 @@ template_paragraph.innerHTML = `
   }
 
   #text_paragraph p {
-    display: inline;
     color: #fff;
     display: inline-block;
-    font-size: 18px;
-    display: inline;
-    line-height: 26px;
+    font-size: 24px;
+    font-weight: bold;
   }
 
   #text_paragraph span {
     display: inline-block;
     color: #EA5C70;
-    font-size: 26px;
+    font-size: 32px;
     font-weight: bold;
     padding-right: 10px;
   }
