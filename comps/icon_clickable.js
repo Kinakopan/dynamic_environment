@@ -187,7 +187,9 @@ class TheClickable extends HTMLElement {
       }, 800);
 
       let paraInterval = setInterval(() => {
-        let nextHidden = document.querySelector('div.paraShow3_0 > the-paragraph[class=hidden]');
+
+        let nextHidden = document.querySelector('div.parashow3_1 > the-paragraph[class=hidden]');
+
         if(nextHidden) {
           nextHidden.classList.remove('hidden')
         } else
