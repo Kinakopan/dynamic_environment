@@ -56,10 +56,10 @@
       <the-paragraph
         class="humanPara"
         style="display: none;"
-        para_span="Factory "
-        para_p="farms kills "
-        para_span="17,900 "
-        para_p="U.S. death annually"
+        para_span1="Factory farms "
+        para_p1="kills "
+        para_span2="17,900 "
+        para_p2="U.S. death annually"
       ></the-paragraph>
 
       <button
@@ -88,7 +88,7 @@
         trigger="earth"
       ></the-button>
 
-      <the-clickable 
+      <the-clickable
         onclick="this.imgShow2_1()"
         class="clickable clickable_earth"
         icon_image="./img/icon/earth.gif"
@@ -125,14 +125,14 @@
         text_size="20px"
       ></the-title>
 
-       <the-button
+      <the-button
         class="button2"
         button_text="next"
         id="airplane"
         trigger="airplane"
       ></the-button>
 
-      <the-clickable 
+      <the-clickable
         onclick="this.imgShow2_2()"
         class="clickable clickable_airplane"
         icon_image="./img/icon/airplane.gif"
@@ -169,27 +169,39 @@
     <!-- Start of section 3 -->
     <div id="section3" class="section">
 
-      <div class="box3_1">
+      <div class="box3_0">
 
         <the-points
-        class="hidden"
-        icon_image="./img/icon/methane.png"
+          class="hidden"
+          icon_image="./img/icon/methane.png"
         ></the-points>
 
         <the-points
-        class="hidden"
-        icon_image="./img/icon/layer.png"
+          class="hidden"
+          icon_image="./img/icon/layer.png"
         ></the-points>
 
         <the-points
-        class="hidden"
-        icon_image="./img/icon/goat.png"
+          class="hidden"
+          icon_image="./img/icon/goat.png"
         ></the-points>
+
+        <the-clickable
+          onclick="this.imgShow3_0()"
+          class="clickable clickable_cow"
+          icon_image="./img/icon/cow.png"
+          icon_alt="cow"
+          trigger="cow"
+        ></the-clickable>
+
       </div>
 
-        <div class="cow-fart">
+
+      <!-- <div class="cow-fart">
         <img class="cow" src="/img/icon/cow-fart.png" alt="cow and it's fart">
-      </div>
+      </div> -->
+
+    <div class="box3_1">
 
       <the-button
         class="button3"
@@ -213,8 +225,6 @@
         para_span="17 trees"
       ></the-paragraph>
 
-
-
       <div id="recycle-bin" class="paper-waste">
         <img src="./img/icon/recycle-bin.png" alt="Recyle-bin" style="width: 100%;">
       </div>
@@ -222,7 +232,7 @@
         <img class="trees" src="img/icon/forest.png" alt="a bunch of trees">
       </div>
 
-
+    </div>
 
 
     </div>
@@ -257,7 +267,7 @@
         icon_image="./img/icon/fashion 1.png"
         ></the-points>
       </div>
-    
+
 
       <div class="second afterClick">
 
@@ -288,7 +298,7 @@
 
 
       <div class="last afterClick">
-          
+
         <div class="fishBox">
           <img class="fish" src="./img/icon/dead-fish.png" alt="dead-fish">
           <img class="fish1" src="./img/icon/dead-fish.png" alt="dead-fish">
