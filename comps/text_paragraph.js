@@ -7,18 +7,24 @@ template_paragraph.innerHTML = `
     font-family: 'Helvetica Neue',sans-serif;
     display: inline-block;
     width: 100%;
+    text-align: left;
   }
 
   #text_paragraph p {
+    display: inline;
     color: #fff;
     display: inline-block;
     font-size: 28px;
   }
 
   #text_paragraph span {
+    display: inline;
     color: #EA5C70;
-    fontSize: 28px
+    font-size: 42px;
+    font-weight: bold;
+    padding: 0 10px;
   }
+
 </style>
 
 <div id="text_paragraph">
@@ -40,23 +46,13 @@ class TheParagraph extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_paragraph.content.cloneNode(true)); //use the template to make a clone
 
-        // if(this.getAttribute("head_text")){
-        //   this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
-        // }
+        if(this.getAttribute("head_text")){
+          this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
+        }
 
         // if(this.getAttribute("text_color")){
         //   this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
         // }
-
-        if(this.getAttribute("para_p")){
-          let newElP = document.createElement("p");
-          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP);
-          let targetP = this.getAttribute("para_p");
-
-          targetP.forEach(el => {
-            newElement.innerHTML = this.getAttribute("para_p");
-          })
-        }
 
         if(this.getAttribute("para_span")){
           let newElSpan = document.createElement("span");
