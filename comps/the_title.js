@@ -7,7 +7,7 @@ template_title.innerHTML = `
 #title {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   text-shadow: 3px 3px 2px #00000050;
   text-transform: capitalize;
   color: #B9E3FA;

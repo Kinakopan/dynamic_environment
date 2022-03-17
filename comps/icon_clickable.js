@@ -13,8 +13,8 @@ template_clickable.innerHTML = `
 #clickableBox,
 #clickableBox::after {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   box-sizing: border-box;
 }
 
@@ -149,13 +149,13 @@ class TheClickable extends HTMLElement {
         let nextHidden = document.querySelector('div.box2_1 > the-points[class=hidden]');
         if(nextHidden) {
           nextHidden.classList.remove('hidden')
-        } else 
+        } else
           clearInterval(interval);
       }, 800);
     }
 
 
- 
+
     imgShow2_2(){
       // var popup = document.getElementById("points2_2");
       // popup.classList.toggle("show");
@@ -163,10 +163,33 @@ class TheClickable extends HTMLElement {
         let nextHidden = document.querySelector('div.box2_2 > the-points[class=hidden]');
         if(nextHidden) {
           nextHidden.classList.remove('hidden')
+        } else
+          clearInterval(interval);
+      }, 800);
+    }
+
+    imgShow3_1(){
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box3_1 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
         } else 
           clearInterval(interval);
       }, 800);
     }
+
+    imgShow4_1(){
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box4_1 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
+    }
+    
+
+
 }
 
 //MUST HAVE - define the tag for the custom elements
