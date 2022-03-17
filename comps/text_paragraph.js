@@ -14,15 +14,21 @@ template_paragraph.innerHTML = `
     display: inline;
     color: #fff;
     display: inline-block;
-    font-size: 28px;
+    font-size: 18px;
+    display: inline;
+    line-height: 26px;
   }
 
   #text_paragraph span {
-    display: inline;
+    display: inline-block;
     color: #EA5C70;
-    font-size: 42px;
+    font-size: 26px;
     font-weight: bold;
-    padding: 0 10px;
+    padding-right: 10px;
+  }
+
+  #text_paragraph p + span {
+    padding-left: 10px;
   }
 
 </style>

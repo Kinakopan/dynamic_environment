@@ -35,7 +35,7 @@ body::before {
 
 .section {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   width: 100%;
   padding: 30px;
   margin: 0;
@@ -45,10 +45,13 @@ body::before {
   position: relative;
   background-position: top;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #section1 {
-  flex:1;
+  flex: .5;
   background-image: url("../img/bg1.png");
 }
 
@@ -66,18 +69,17 @@ body::before {
 }
 
 #section2 {
-  flex: 3.2;
+  flex: 1;
   background-image: url("../img/bg2.png");
-  margin-top: 100px;
 }
 
 #section3 {
-  flex: 0.8;
+  flex: 1;
   background-image: url("../img/bg3.png");
 }
 
 #section4 {
-  flex: 2;
+  flex: 1;
   background-image: url("../img/bg4.png");
   background-position: bottom;
 }
