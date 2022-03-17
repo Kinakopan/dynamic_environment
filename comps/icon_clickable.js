@@ -166,6 +166,15 @@ class TheClickable extends HTMLElement {
         } else
           clearInterval(interval);
       }, 800);
+
+      let paraInterval = setInterval(() => {
+        let nextHidden = document.querySelector('div.parashow2_2 > the-paragraph[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(paraInterval);
+      }, 3200);
+
     }
 
     imgShow3_1(){
@@ -187,13 +196,6 @@ class TheClickable extends HTMLElement {
           clearInterval(interval);
       }, 800);
 
-      let paraInterval = setInterval(() => {
-        let nextHidden = document.querySelector('div.parashow2_2 > the-paragraph[class=hidden]');
-        if(nextHidden) {
-          nextHidden.classList.remove('hidden')
-        } else 
-          clearInterval(paraInterval);
-      }, 3200);
     }
 
 
