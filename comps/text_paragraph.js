@@ -105,7 +105,6 @@ class TheParagraph extends HTMLElement {
     //   const element = document.querySelector('.parashow2_1');
     //   element.innerHTML = element.innerHTML.replace('20%', '<span style="color: red;">20%</span>');
     // }
-
 }
 
 //MUST HAVE - define the tag for the custom elements
