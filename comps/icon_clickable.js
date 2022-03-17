@@ -102,8 +102,8 @@ class TheClickable extends HTMLElement {
       let binRect = bin.getBoundingClientRect();
 
       console.log(binRect.left, binRect.right);
-      let destX = (binRect.left+binRect.right)/2;
-      let destY = (binRect.top+binRect.bottom)/36;
+      let destX = (binRect.left+binRect.right)/1.95;
+      let destY = (binRect.top+binRect.bottom)/19;
       let timer = null;
       let x = 0,y = 0;
       clearInterval(timer);
