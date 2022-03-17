@@ -102,8 +102,8 @@ class TheClickable extends HTMLElement {
       let binRect = bin.getBoundingClientRect();
 
       console.log(binRect.left, binRect.right);
-      let destX = (binRect.left+binRect.right)/2;
-      let destY = (binRect.top+binRect.bottom)/36;
+      let destX = (binRect.left+binRect.right)/1.95;
+      let destY = (binRect.top+binRect.bottom)/19;
       let timer = null;
       let x = 0,y = 0;
       clearInterval(timer);
@@ -127,21 +127,46 @@ class TheClickable extends HTMLElement {
       document.querySelector(".contentsWrap").classList.add("contentsWrap_bg");
     }
 
-    finishAnimation() {
-     document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
-    }
+    // finishAnimation() {
+    //  document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
+    // }
 
     imgShow2_1(){
-      var popup = document.getElementById("points2_1");
-      popup.classList.toggle("show");
+      // var popup = document.getElementById("points2_1");
+      // popup.classList.toggle("show");
+
+      // var test = document.getElementById("points2_1");
+      // test.classList.toggle("clicked");
+
+
+      // let nextHidden = document.querySelector('div.box2_1 > the-points[class=hidden]');
+      // if(nextHidden)  {
+      //   nextHidden.classList.remove('hidden');
+      //   setTimeout(imgShow2_1, 500);
+      // }
+
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box2_1 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
     }
 
+
+ 
     imgShow2_2(){
-      var popup = document.getElementById("points2_2");
-      popup.classList.toggle("show");
+      // var popup = document.getElementById("points2_2");
+      // popup.classList.toggle("show");
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box2_2 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
     }
-
-
 }
 
 //MUST HAVE - define the tag for the custom elements

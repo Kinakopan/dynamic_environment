@@ -13,6 +13,7 @@ template_paragraph.innerHTML = `
   #text_paragraph p {
     display: inline;
     color: #fff;
+    display: inline-block;
     font-size: 28px;
   }
 
@@ -45,10 +46,6 @@ class TheParagraph extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_paragraph.content.cloneNode(true)); //use the template to make a clone
 
-        // if(this.getAttribute("head_text")){
-        //   this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
-        // }
-
         if(this.getAttribute("para_p1", "para_p2", "para_span1", "para_span2")){
           let newElSpan1 = document.createElement("span");
           this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan1);
@@ -65,26 +62,7 @@ class TheParagraph extends HTMLElement {
           let newElP2 = document.createElement("p");
           this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP2);
           newElP2.innerHTML = this.getAttribute("para_p2");
-
-          // targetP.forEach(el => {
-          //   newElement.innerHTML = this.getAttribute("para_p");
-          // })
         }
-
-        // if(this.getAttribute("para_p")){
-        //   let newElP = document.createElement("p");
-        //   this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP);
-        //   // let targetP = this.getAttribute("para_p");
-        //   newElP.innerHTML = this.getAttribute("para_p");
-        // }
-
-        // if(this.getAttribute("para_span")){
-        //   let newElSpan = document.createElement("span");
-        //   this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan);
-        //   newElSpan.innerHTML = this.getAttribute("para_span");
-        // }
-
-        // document.querySelector(".continueBtn").onclick = () => this.goToNext();
     }
 
     humanParagraph() {
