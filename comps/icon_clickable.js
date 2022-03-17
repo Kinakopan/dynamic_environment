@@ -167,6 +167,29 @@ class TheClickable extends HTMLElement {
           clearInterval(interval);
       }, 800);
     }
+
+    imgShow3_1(){
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box3_1 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
+    }
+
+    imgShow4_1(){
+      let interval = setInterval(() => {
+        let nextHidden = document.querySelector('div.box4_1 > the-points[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else 
+          clearInterval(interval);
+      }, 800);
+    }
+    
+
+
 }
 
 //MUST HAVE - define the tag for the custom elements

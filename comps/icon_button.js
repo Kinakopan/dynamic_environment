@@ -49,6 +49,7 @@ class TheButton extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_button.content.cloneNode(true)); //use the template to make a clone
         this.shadowRoot.querySelector(".button").innerHTML = this.getAttribute('button_text');
+        // this.document.querySelectorAll("#clickableBox").onclick = console.log("hello");
 
 
         let trigger = this.getAttribute("trigger");
@@ -162,7 +163,22 @@ class TheButton extends HTMLElement {
     }
 
     showParagraph() {
+        
+        let icons = document.querySelectorAll(".hidden"); 
+        let time = 500;
 
+        icons.forEach(el => {
+            setTimeout(() => {
+                el.style.cssText =  `
+                opacity: 1;
+                position: relative;
+                z-index: 3;
+                animation: slide-in 1000ms;
+                `
+            }, time)
+            time += 500;
+        })
+        
         document.querySelector(".first").style.cssText = `
         opacity: 1;
         position: relative;
@@ -172,22 +188,23 @@ class TheButton extends HTMLElement {
         `;
 
         document.querySelector(".second").style.cssText = `
-        z-index: 100;
-        animation: slide-in 1000ms;
-        animation-delay: 1000ms;
-        animation-fill-mode: backwards;
-        opacity: 1;
         z-index: 3;
-        `;
-
-        document.querySelector(".last").style.cssText = `
-        z-index: 3;
+        position: relative;
         animation: slide-in 1000ms;
         animation-delay: 2000ms;
         animation-fill-mode: backwards;
         opacity: 1;
-        
         `;
+
+        document.querySelector(".last").style.cssText = `
+        z-index: 3;
+        position: relative;
+        animation: slide-in 1000ms;
+        animation-delay: 4000ms;
+        animation-fill-mode: backwards;
+        opacity: 1;
+        `;
+
 
     }
 
@@ -196,6 +213,7 @@ class TheButton extends HTMLElement {
         document.querySelector(".second").style.cssText = `opacity: 0;`
         document.querySelector(".first").style.cssText = `opacity: 0;`
         document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
+        
     }
 }
 //MUST HAVE - define the tag for the custom elements
