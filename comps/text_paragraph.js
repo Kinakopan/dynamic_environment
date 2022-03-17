@@ -7,7 +7,7 @@ template_paragraph.innerHTML = `
     font-family: 'Helvetica Neue',sans-serif;
     display: inline-block;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   #text_paragraph p {

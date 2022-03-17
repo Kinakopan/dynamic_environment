@@ -72,11 +72,13 @@ body::before {
 #section2 {
   flex: 1;
   background-image: url("../img/bg2.png");
+  padding-bottom: 300px;
 }
 
 #section3 {
   flex: 1;
   background-image: url("../img/bg3.png");
+  padding-top: 150px;
 }
 
 #section4 {
