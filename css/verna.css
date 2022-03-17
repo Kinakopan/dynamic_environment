@@ -37,7 +37,7 @@
      height: 18%;
     }
 
-    .para3_1 {
+    .para3_2 {
       display: inline-block;
       position: absolute;
       left: 40%;
@@ -54,6 +54,8 @@
     align-items: center;
    }
     
-
+.button3 {
+ bottom: 100%;
+}
 
   
