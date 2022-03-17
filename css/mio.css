@@ -55,10 +55,6 @@ the-points {
   width: 30%;
 }
 
-#section4 {
-  padding-top: 0;
-}
-
 /*
 @keyframes popup {
   from {
@@ -130,4 +126,8 @@ body {
 
 img.trees {
   height: auto;
+}
+
+.second {
+  padding: 0;
 }
