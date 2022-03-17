@@ -88,7 +88,8 @@
         trigger="earth"
       ></the-button>
 
-      <the-clickable onclick="this.imgShow2_1()"
+      <the-clickable 
+        onclick="this.imgShow2_1()"
         class="clickable clickable_earth"
         icon_image="./img/icon/earth.gif"
         icon_alt="earth"
@@ -131,7 +132,8 @@
         trigger="airplane"
       ></the-button>
 
-      <the-clickable onclick="this.imgShow2_2()"
+      <the-clickable 
+        onclick="this.imgShow2_2()"
         class="clickable clickable_airplane"
         icon_image="./img/icon/airplane.gif"
         icon_alt="airplane"
@@ -170,14 +172,17 @@
       <div class="box3_1">
 
         <the-points
+        class="hidden"
         icon_image="./img/icon/methane.png"
         ></the-points>
 
         <the-points
+        class="hidden"
         icon_image="./img/icon/layer.png"
         ></the-points>
 
         <the-points
+        class="hidden"
         icon_image="./img/icon/goat.png"
         ></the-points>
       </div>
@@ -186,12 +191,21 @@
         <img class="cow" src="/img/icon/cow-fart.png" alt="cow and it's fart">
       </div>
 
+      <the-button
+        class="button3"
+        button_text="next"
+        id="waste"
+        trigger="waste"
+      ></the-button>
+
 
       <the-clickable class="clickable clickable_waste"
+        onclick="this.imgShow3_1()"
         onclick="this.paperWasteAnimationCallback()"
         icon_image="./img/icon/paper-waste.png"
         icon_alt="paper waste"
         icon_margin="0 0 0 0 auto"
+        trigger="waste"
       ></the-clickable>
 
       <the-paragraph class="para3_1"
@@ -225,26 +239,30 @@
           text_color="#DCE8FF"
           text_size="20px"
         ></the-title>
-
-        <div class="box4_1">
-          <the-points
-          icon_image="./img/icon/chimney.png"
-          ></the-points>
-
-          <the-points
-          icon_image="./img/icon/tractors 1.png"
-          ></the-points>
-
-          <the-points
-          icon_image="./img/icon/fashion 1.png"
-          ></the-points>
-        </div>
       </div>
 
+      <div class="box4_1">
+        <the-points
+        class="hidden"
+        icon_image="./img/icon/chimney.png"
+        ></the-points>
+
+        <the-points
+        class="hidden"
+        icon_image="./img/icon/tractors 1.png"
+        ></the-points>
+
+        <the-points
+        class="hidden"
+        icon_image="./img/icon/fashion 1.png"
+        ></the-points>
+      </div>
+    
 
       <div class="second afterClick">
 
         <the-paragraph class="para4_1"
+
           para_span1="Destroys "
           para_p1="their habitats"
         ></the-paragraph>
@@ -252,14 +270,16 @@
       </div>
 
 
+
       <the-button
       class="button4"
       button_text="next"
       id="bear"
       trigger="bear"
-      ></the-button>
+     ></the-button>
 
       <the-clickable
+      onclick="this.imgShow4_1()"
       class="clickable clickable_bear"
       icon_image="./img/icon/bear.png"
       icon_alt="bears"
@@ -267,20 +287,20 @@
       ></the-clickable>
 
 
-        <div class="last afterClick">
+      <div class="last afterClick">
           
-          <div class="fishBox">
+        <div class="fishBox">
           <img class="fish" src="./img/icon/dead-fish.png" alt="dead-fish">
           <img class="fish1" src="./img/icon/dead-fish.png" alt="dead-fish">
           <img class="fish2" src="./img/icon/dead-fish.png" alt="dead-fish">
-          </div>
-          <the-paragraph class="para4_2"
-          para_span="Collapse"
-          para_p="ecosystems"
-         
-          ></the-paragraph>
-
         </div>
+
+        <the-paragraph class="para4_2"
+        para_span="Collapse"
+        para_p="ecosystems"
+        ></the-paragraph>
+
+      </div>
 
 
 
