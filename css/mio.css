@@ -19,7 +19,22 @@ the-title {
 the-clickable {
   margin-left: 7%;
   display: inline-block;
+  vertical-align: top;
 }
+
+.para2_1,
+.para2_2 {
+  margin: 30px 0;
+}
+
+the-paragraph {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin: 30px 0;
+}
+
+/* for responsive
 
 the-paragraph {
     display: inline-block;
@@ -35,11 +50,15 @@ the-clickable + the-paragraph {
 the-paragraph + the-clickable {
   margin-right: 40px;
 }
+ */
 
 the-points {
   width: 30%;
 }
 
+#section4 {
+  padding-top: 0;
+}
 
 /*
 @keyframes popup {
@@ -78,8 +97,11 @@ body {
     animation-delay: 3s;
 } */
 
-
 .box2_1, .box2_2{
     justify-content: space-between;
 
   }
+
+.clickable_airplane {
+  align-self: end;
+}

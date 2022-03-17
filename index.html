@@ -56,10 +56,10 @@
       <the-paragraph
         class="humanPara"
         style="display: none;"
-        para_span="Factory "
-        para_p="farms kills "
-        para_span="17,900 "
-        para_p="U.S. death annually"
+        para_span1="Factory farms "
+        para_p1="kills "
+        para_span2="17,900 "
+        para_p2="U.S. death annually"
       ></the-paragraph>
 
       <button
@@ -75,6 +75,7 @@
     <div id="section2" class="section">
 
       <!-- Earth part -->
+
       <the-title class="title2_1"
           head_text="Over producing"
           text_color="#DCE8FF"
@@ -88,7 +89,8 @@
         trigger="earth"
       ></the-button>
 
-      <the-clickable onclick="this.imgShow2_1()"
+      <the-clickable
+        onclick="this.imgShow2_1()"
         class="clickable clickable_earth"
         icon_image="./img/icon/earth.gif"
         icon_alt="earth"
@@ -103,7 +105,7 @@
         para_p="of natural resource" --> 
 
       <div class="box2_1" id="points2_1">
-        <the-points class="hidden" 
+        <the-points class="hidden"
         icon_image="./img/icon/sun.png"
         ></the-points>
 
@@ -138,13 +140,21 @@
         trigger="airplane"
       ></the-button>
 
-      <the-clickable onclick="this.imgShow2_2()"
+      <the-clickable
+        onclick="this.imgShow2_2()"
         class="clickable clickable_airplane"
         icon_image="./img/icon/airplane.gif"
         icon_alt="airplane"
         icon_margin="0 0 0 auto"
         trigger="airplane"
       ></the-clickable>
+
+      <the-paragraph class="para2_2"
+        para_span1="30% "
+        para_p1="of food consumed in Canada are imported, resulting in food miles of over "
+        para_span2="61 billion "
+        para_p2="tonnes km"
+      ></the-paragraph>
 
       <div class="box2_2" id="points2_2">
 
@@ -161,6 +171,7 @@
         ></the-points>
       </div>
 
+
       <div class="parashow2_2">
         <the-paragraph class="hidden"
         head_text="30% of food consumed in Canada are imported, resulting in food miles of over 61 billion tonnes km"
@@ -173,41 +184,61 @@
     <!-- Start of section 3 -->
     <div id="section3" class="section">
 
-      <div class="box3_1">
+      <div class="box3_0">
 
         <the-points
-        icon_image="./img/icon/methane.png"
+          class="hidden"
+          icon_image="./img/icon/methane.png"
         ></the-points>
 
         <the-points
-        icon_image="./img/icon/layer.png"
+          class="hidden"
+          icon_image="./img/icon/layer.png"
         ></the-points>
 
         <the-points
-        icon_image="./img/icon/goat.png"
+          class="hidden"
+          icon_image="./img/icon/goat.png"
         ></the-points>
+
+        <the-clickable
+          onclick="this.imgShow3_0()"
+          class="clickable clickable_cow"
+          icon_image="./img/icon/cow.png"
+          icon_alt="cow"
+          trigger="cow"
+        ></the-clickable>
+
       </div>
 
-        <div class="cow-fart">
+
+      <!-- <div class="cow-fart">
         <img class="cow" src="/img/icon/cow-fart.png" alt="cow and it's fart">
-      </div>
+      </div> -->
+
+    <div class="box3_1">
+
+      <the-button
+        class="button3"
+        button_text="next"
+        id="waste"
+        trigger="waste"
+      ></the-button>
 
 
       <the-clickable class="clickable clickable_waste"
+        onclick="this.imgShow3_1()"
         onclick="this.paperWasteAnimationCallback()"
-        onclick="this.textShow3_2()"
         icon_image="./img/icon/paper-waste.png"
         icon_alt="paper waste"
         icon_margin="0 0 0 0 auto"
+        trigger="waste"
       ></the-clickable>
 
       <the-paragraph class="para3_1"
         para_p="1 ton recyle paper saves "
         para_span="17 trees"
-        onclick="this.textShow3_2()"
       ></the-paragraph>
-
-    
 
       <div id="recycle-bin" class="paper-waste">
         <img src="./img/icon/recycle-bin.png" alt="Recyle-bin" style="width: 100%;">
@@ -216,8 +247,8 @@
         <img class="trees" src="img/icon/forest.png" alt="a bunch of trees">
       </div>
 
-      
-    
+    </div>
+
 
     </div>
 
@@ -233,41 +264,48 @@
           text_color="#DCE8FF"
           text_size="20px"
         ></the-title>
+      </div>
 
-        <div class="box4_1">
-          <the-points
-          icon_image="./img/icon/chimney.png"
-          ></the-points>
+      <div class="box4_1">
+        <the-points
+        class="hidden"
+        icon_image="./img/icon/chimney.png"
+        ></the-points>
 
-          <the-points
-          icon_image="./img/icon/tractors 1.png"
-          ></the-points>
+        <the-points
+        class="hidden"
+        icon_image="./img/icon/tractors 1.png"
+        ></the-points>
 
-          <the-points
-          icon_image="./img/icon/fashion 1.png"
-          ></the-points>
-        </div>
+        <the-points
+        class="hidden"
+        icon_image="./img/icon/fashion 1.png"
+        ></the-points>
       </div>
 
 
       <div class="second afterClick">
 
-      <the-paragraph class="para4_1"
-      para_span="Destroys"
-      para_p="their "
-      para_span="habitats"
-      ></the-paragraph>
+        <the-paragraph class="para4_1"
+        para_span1="Destroys"
+        para_p1="wild animal's habitats"
+        para_span2="Collapse"
+        para_p2="ecosystems"
+        ></the-paragraph>
 
-    </div>
+      </div>
+
+
 
       <the-button
       class="button4"
       button_text="next"
       id="bear"
       trigger="bear"
-      ></the-button>
+     ></the-button>
 
       <the-clickable
+      onclick="this.imgShow4_1()"
       class="clickable clickable_bear"
       icon_image="./img/icon/bear.png"
       icon_alt="bears"
@@ -275,20 +313,20 @@
       ></the-clickable>
 
 
-        <div class="last afterClick">
-          
-          <div class="fishBox">
+      <div class="last afterClick">
+
+        <div class="fishBox">
           <img class="fish" src="./img/icon/dead-fish.png" alt="dead-fish">
           <img class="fish1" src="./img/icon/dead-fish.png" alt="dead-fish">
           <img class="fish2" src="./img/icon/dead-fish.png" alt="dead-fish">
-          </div>
-          <the-paragraph class="para4_2"
-          para_span="Collapse"
-          para_p="ecosystems"
-         
-          ></the-paragraph>
-
         </div>
+
+        <!-- <the-paragraph class="para4_2"
+        para_span="Collapse"
+        para_p="ecosystems"
+        ></the-paragraph> -->
+
+      </div>
 
 
 
