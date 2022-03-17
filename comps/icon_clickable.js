@@ -193,7 +193,7 @@ class TheClickable extends HTMLElement {
           nextHidden.classList.remove('hidden')
         } else
           clearInterval(paraInterval);
-      }, 3200);
+      }, 800);
     }
 
     imgShow3_2(){
