@@ -105,3 +105,8 @@ body {
 .clickable_airplane {
   align-self: end;
 }
+
+.box3_0,
+.box3_1 {
+  flex: 1;
+}
