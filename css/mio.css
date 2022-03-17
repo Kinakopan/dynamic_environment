@@ -106,7 +106,8 @@ body {
   align-self: end;
 }
 
-.box3_0,
-.box3_1 {
-  flex: 1;
+.para3_1 {
+    position: relative;
+    left: unset;
+    top: unset;
 }
