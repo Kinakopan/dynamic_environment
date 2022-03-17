@@ -163,8 +163,8 @@ class TheButton extends HTMLElement {
     }
 
     showParagraph() {
-        
-        let icons = document.querySelectorAll(".hidden"); 
+
+        let icons = document.querySelectorAll(".hidden");
         let time = 500;
 
         icons.forEach(el => {
@@ -178,13 +178,13 @@ class TheButton extends HTMLElement {
             }, time)
             time += 500;
         })
-       
-        document.querySelector(".para3_1").style.cssText = `
-        opacity: 1;
-        position: relative;
-        z-index: 3;
-        animation: slide-in 1000ms;
-        `
+
+        // document.querySelector(".para3_1").style.cssText = `
+        // opacity: 1;
+        // position: relative;
+        // z-index: 3;
+        // animation: slide-in 1000ms;
+        // `
 
         document.querySelector(".first").style.cssText = `
         opacity: 1;
@@ -219,9 +219,8 @@ class TheButton extends HTMLElement {
         document.querySelector(".last").style.cssText = `opacity: 0;`
         document.querySelector(".second").style.cssText = `opacity: 0;`
         document.querySelector(".first").style.cssText = `opacity: 0;`
-        document.querySelector(".para3_1").style.cssText = `opacity: 0;`
         document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
-        
+
     }
 }
 //MUST HAVE - define the tag for the custom elements
