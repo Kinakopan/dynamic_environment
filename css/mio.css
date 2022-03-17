@@ -117,3 +117,17 @@ body {
 .box4_1 > the-points {
   padding: 0.1em;
 }
+
+.paper-waste {
+  transform: translateX(-50%);
+  width: 35%;
+  bottom: 5%;
+}
+
+.clickable_waste {
+  bottom: 20%;
+}
+
+img.trees {
+  height: auto;
+}
