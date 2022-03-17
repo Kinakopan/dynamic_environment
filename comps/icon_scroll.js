@@ -7,7 +7,7 @@ template_scroll.innerHTML = `
     width: 29.5px;
     height: 40px;
     position: absolute;
-    margin-top: calc(100vh - 200px);
+    margin-top: calc(100vh - 250px);
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
