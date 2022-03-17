@@ -49,10 +49,6 @@ class TheParagraph extends HTMLElement {
         //   this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
         // }
 
-        // if(this.getAttribute("text_color")){
-        //   this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
-        // }
-
         if(this.getAttribute("para_p1", "para_p2", "para_span1", "para_span2")){
           let newElSpan1 = document.createElement("span");
           this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan1);
