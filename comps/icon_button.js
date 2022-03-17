@@ -19,9 +19,11 @@ template_button.innerHTML = `
     display: none;
     float: right;
     z-index: 500;
-    position: relative;
+    // position: relative;
     position: absolute;
     right: 50px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px 1px #08081B;
 }
 
 
