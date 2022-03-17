@@ -9,6 +9,7 @@ html, body {
   min-width: 320px;
   min-height: 1877px;
   position: relative;
+  box-sizing: border-box;
 }
 
 body::before {

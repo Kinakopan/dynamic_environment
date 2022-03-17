@@ -5,10 +5,24 @@
     margin-top: 3em;
     margin-bottom: 2em;
     padding: 1em;
+    z-index: 3;
+    Position: relative;
   }
-.para2_1, .para2_2{
+.parashow2_1 > the-paragraph, .parashow2_2 > the-paragraph{
+    display: inline-block;
     text-align: center;
-    margin-bottom: 20%;  
+    margin-bottom: 20%; 
+    z-index: 3; 
+    Position: relative; 
+    font-family: 'Helvetica Neue',sans-serif;
+    width: 100%;
+    color: #fff;
+    font-size: 28px;
+}
+
+.title2_1, .title2_2 {
+  z-index: 3;
+  Position: relative;
 }
 
 .hidden {

@@ -75,7 +75,8 @@
     <div id="section2" class="section">
 
       <!-- Earth part -->
-      <the-title
+
+      <the-title class="title2_1"
           head_text="Over producing"
           text_color="#DCE8FF"
           text_size="20px"
@@ -97,12 +98,14 @@
         trigger="earth"
       ></the-clickable>
 
-      <the-paragraph class="para2_1"
+      <div class="parashow2_1">
+        <the-paragraph class="hidden"
         para_span1="20% "
-        para_p1="of the population consumes "
-        para_span2="80% "
+        para_p1="of the population consumes "	para_p="of the population consumes "
+        para_span2="80% "	para_span="80% "
         para_p2="of natural resource"
-      ></the-paragraph>
+        ></the-paragraph>
+      </div>
 
       <div class="box2_1" id="points2_1">
         <the-points class="hidden"
@@ -119,7 +122,7 @@
       </div>
 
       <!-- Airplan part -->
-      <the-title
+      <the-title class="title2_2"
         head_text="Food Miles"
         text_color="#DCE8FF"
         text_size="20px"
@@ -163,13 +166,20 @@
         ></the-points>
       </div>
 
+
+      <div class="parashow2_2">
+        <the-paragraph class="hidden"
+        head_text="30% of food consumed in Canada are imported, resulting in food miles of over 61 billion tonnes km"
+        ></the-paragraph>
+      </div>
+
     </div>
     <!-- End of section 2 -->
 
     <!-- Start of section 3 -->
     <div id="section3" class="section">
 
-      <div class="box3_0">
+      <div class="box3_1">
 
         <the-points
           class="hidden"
@@ -186,8 +196,15 @@
           icon_image="./img/icon/goat.png"
         ></the-points>
 
+        <the-button
+        class="button5"
+        button_text="next"
+        id="cow"
+        trigger="cow"
+      ></the-button>
+
         <the-clickable
-          onclick="this.imgShow3_0()"
+          onclick="this.imgShow3_1()"
           class="clickable clickable_cow"
           icon_image="./img/icon/cow.png"
           icon_alt="cow"
@@ -201,8 +218,6 @@
         <img class="cow" src="/img/icon/cow-fart.png" alt="cow and it's fart">
       </div> -->
 
-    <div class="box3_1">
-
       <the-button
         class="button3"
         button_text="next"
@@ -212,7 +227,7 @@
 
 
       <the-clickable class="clickable clickable_waste"
-        onclick="this.imgShow3_1()"
+        
         onclick="this.paperWasteAnimationCallback()"
         icon_image="./img/icon/paper-waste.png"
         icon_alt="paper waste"
