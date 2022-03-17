@@ -127,9 +127,9 @@ class TheClickable extends HTMLElement {
       document.querySelector(".contentsWrap").classList.add("contentsWrap_bg");
     }
 
-    finishAnimation() {
-     document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
-    }
+    // finishAnimation() {
+    //  document.querySelector(".contentsWrap").classList.remove("contentsWrap_bg");
+    // }
 
     imgShow2_1(){
       // var popup = document.getElementById("points2_1");
