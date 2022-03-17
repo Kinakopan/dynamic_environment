@@ -7,7 +7,7 @@ template_clickable.innerHTML = `
     background: #c4c4c470;
     cursor: pointer;
     position: relative;
-    padding: 20px;
+    padding: 5px;
 }
 
 #clickableBox,
@@ -173,7 +173,7 @@ class TheClickable extends HTMLElement {
         let nextHidden = document.querySelector('div.box3_1 > the-points[class=hidden]');
         if(nextHidden) {
           nextHidden.classList.remove('hidden')
-        } else 
+        } else
           clearInterval(interval);
       }, 800);
     }
@@ -183,11 +183,11 @@ class TheClickable extends HTMLElement {
         let nextHidden = document.querySelector('div.box4_1 > the-points[class=hidden]');
         if(nextHidden) {
           nextHidden.classList.remove('hidden')
-        } else 
+        } else
           clearInterval(interval);
       }, 800);
     }
-    
+
 
 
 }
