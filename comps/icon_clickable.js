@@ -187,7 +187,6 @@ class TheClickable extends HTMLElement {
       }, 800);
 
       let paraInterval = setInterval(() => {
-
         let nextHidden = document.querySelector('div.parashow3_1 > the-paragraph[class=hidden]');
 
         if(nextHidden) {
@@ -195,8 +194,32 @@ class TheClickable extends HTMLElement {
         } else
           clearInterval(paraInterval);
       }, 3200);
+    }
+
+    imgShow3_2(){
+
+      setTimeout(() => {
+        document.querySelector(".clickable_waste").paperWasteAnimationCallback();
+      }, 0)
+
+      // let interval = setInterval(() => {
+      //   let nextHidden = document.querySelector('div.box3_2 > the-points[class=hidden]');
+      //   if(nextHidden) {
+      //     nextHidden.classList.remove('hidden')
+      //   } else
+      //     clearInterval(interval);
+      // }, 800);
+
+      let paraInterval = setInterval(() => {
+        let nextHidden = document.querySelector('div.parashow3_2 > the-paragraph[class=hidden]');
+        if(nextHidden) {
+          nextHidden.classList.remove('hidden')
+        } else
+          clearInterval(paraInterval);
+      }, 0);
 
     }
+
 
     imgShow4_1(){
       let interval = setInterval(() => {
