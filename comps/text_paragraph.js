@@ -8,6 +8,7 @@ template_paragraph.innerHTML = `
     display: inline-block;
     width: 100%;
     text-align: left;
+    box-sizing: border-box;
   }
 
   #text_paragraph p {
@@ -78,7 +79,7 @@ class TheParagraph extends HTMLElement {
 
       document.querySelector(".humanPara").style.cssText= `
         display: block;
-        padding-top: 30vh;
+        padding-top: 30vh 20px 0;
       `
 
       document.querySelector(".continueBtn").style.cssText=`
