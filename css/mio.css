@@ -19,6 +19,8 @@ the-title {
 the-clickable {
   margin-left: 7%;
   display: inline-block;
+  vertical-align: top;
+  padding-top: 50px;
 }
 
 the-paragraph {

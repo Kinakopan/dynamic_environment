@@ -45,30 +45,35 @@ class TheParagraph extends HTMLElement {
     connectedCallback(){
         this.shadowRoot.appendChild(template_paragraph.content.cloneNode(true)); //use the template to make a clone
 
-        if(this.getAttribute("head_text")){
-          this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
-        }
+        // if(this.getAttribute("head_text")){
+        //   this.shadowRoot.querySelector("#text_paragraph").innerText = this.getAttribute("head_text");
+        // }
 
         // if(this.getAttribute("text_color")){
         //   this.shadowRoot.querySelector("#text_paragraph").style.color = this.getAttribute("text_color");
         // }
 
+        if(this.getAttribute("para_p1", "para_p2", "para_span1", "para_span2")){
+          let newElSpan1 = document.createElement("span");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan1);
+          newElSpan1.innerHTML = this.getAttribute("para_span1");
 
-    //     if(this.getAttribute("para_p") || this.getAttribute("para_span")){
+          let newElP1 = document.createElement("p");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP1);
+          newElP1.innerHTML = this.getAttribute("para_p1");
 
-    //       let newElSpan = document.createElement("span");
-    //       this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan);
-    //       newElSpan.innerHTML = this.getAttribute("para_span");
+          let newElSpan2 = document.createElement("span");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElSpan2);
+          newElSpan2.innerHTML = this.getAttribute("para_span2");
 
-    //       let newElP = document.createElement("p");
-    //       this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP);
-    //       // let targetP = this.getAttribute("para_p");
-    //       newElP.innerHTML = this.getAttribute("para_p");
+          let newElP2 = document.createElement("p");
+          this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP2);
+          newElP2.innerHTML = this.getAttribute("para_p2");
 
-    //       // targetP.forEach(el => {
-    //       //   newElement.innerHTML = this.getAttribute("para_p");
-    //       // })
-    // }
+          // targetP.forEach(el => {
+          //   newElement.innerHTML = this.getAttribute("para_p");
+          // })
+        }
 
         // if(this.getAttribute("para_p")){
         //   let newElP = document.createElement("p");
@@ -83,7 +88,7 @@ class TheParagraph extends HTMLElement {
         //   newElSpan.innerHTML = this.getAttribute("para_span");
         // }
 
-        document.querySelector(".continueBtn").onclick = () => this.goToNext();
+        // document.querySelector(".continueBtn").onclick = () => this.goToNext();
     }
 
     humanParagraph() {
