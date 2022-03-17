@@ -36,7 +36,6 @@ body::before {
 
 .section {
   position: relative;
-  /* display: inline-block; */
   width: 100%;
   padding: 30px;
   margin: 0;
@@ -72,7 +71,7 @@ body::before {
 #section2 {
   flex: 1;
   background-image: url("../img/bg2.png");
-  padding-bottom: 300px;
+  padding-bottom: 350px;
 }
 
 #section3 {

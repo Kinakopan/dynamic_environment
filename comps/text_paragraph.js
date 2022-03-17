@@ -12,21 +12,22 @@ template_paragraph.innerHTML = `
 
   #text_paragraph p {
     color: #fff;
-    display: inline-block;
-    font-size: 24px;
+    display: inline;
+    font-size: 18px;
     font-weight: bold;
+    line-height: 24px;
   }
 
   #text_paragraph span {
-    display: inline-block;
+    display: inline;
     color: #EA5C70;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
-    padding-right: 10px;
+    padding-right: 5px;
   }
 
   #text_paragraph p + span {
-    padding-left: 10px;
+    padding-left: 5px;
   }
 
 </style>
@@ -67,6 +68,8 @@ class TheParagraph extends HTMLElement {
           this.shadowRoot.querySelector("#text_paragraph").appendChild(newElP2);
           newElP2.innerHTML = this.getAttribute("para_p2");
         }
+
+        document.querySelector(".continueBtn").onclick = () => this.goToNext();
     }
 
     humanParagraph() {
@@ -76,7 +79,7 @@ class TheParagraph extends HTMLElement {
 
       document.querySelector(".humanPara").style.cssText= `
         display: block;
-        padding-top: 30vh 20px 0;
+        padding: 30vh 20px 0;
       `
 
       document.querySelector(".continueBtn").style.cssText=`
@@ -102,7 +105,6 @@ class TheParagraph extends HTMLElement {
     //   const element = document.querySelector('.parashow2_1');
     //   element.innerHTML = element.innerHTML.replace('20%', '<span style="color: red;">20%</span>');
     // }
-
 }
 
 //MUST HAVE - define the tag for the custom elements
