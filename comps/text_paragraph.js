@@ -7,8 +7,7 @@ template_paragraph.innerHTML = `
     font-family: 'Helvetica Neue',sans-serif;
     display: inline-block;
     width: 100%;
-    text-align: left;
-    box-sizing: border-box;
+    text-align: center;
   }
 
   #text_paragraph p {
@@ -100,6 +99,11 @@ class TheParagraph extends HTMLElement {
       document.querySelector("#human").humanDisappear();
       document.querySelector("#smoke").smokeDisappear();
     }
+
+    // paraColorChange(){
+    //   const element = document.querySelector('.parashow2_1');
+    //   element.innerHTML = element.innerHTML.replace('20%', '<span style="color: red;">20%</span>');
+    // }
 
 }
 
