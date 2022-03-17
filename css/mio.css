@@ -13,11 +13,11 @@ the-scroll {
 the-title {
   display: block;
   width: 100%;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 
 the-clickable {
-  margin-left: 7%;
+  margin: 20px 0 20px 7%;
   display: inline-block;
   vertical-align: top;
 }
@@ -110,4 +110,11 @@ body {
     position: relative;
     left: unset;
     top: unset;
+}
+
+.box2_1 > the-points,
+.box2_2 > the-points,
+.box3_1 > the-points,
+.box4_1 > the-points {
+  padding: 0.1em;
 }

@@ -72,7 +72,7 @@ body::before {
 #section2 {
   flex: 1;
   background-image: url("../img/bg2.png");
-  padding-bottom: 300px;
+  padding-bottom: 350px;
 }
 
 #section3 {

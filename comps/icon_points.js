@@ -9,7 +9,7 @@ template_points.innerHTML = `
     width: 100%;
     height: auto;
     box-shadow: 0px 8px 6px 0px #b9b9b9;
-    padding: 15px;
+    padding: 5px;
     box-sizing: border-box;
     cursor: pointer;
   }
